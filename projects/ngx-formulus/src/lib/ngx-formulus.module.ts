@@ -1,16 +1,8 @@
 import { NgModule } from '@angular/core';
-import { NgxFormulusComponent } from './ngx-formulus.component';
-
-
 
 @NgModule({
-  declarations: [
-    NgxFormulusComponent
-  ],
-  imports: [
-  ],
-  exports: [
-    NgxFormulusComponent
-  ]
+  declarations: [],
+  imports: [],
+  exports: [],
 })
-export class NgxFormulusModule { }
+export class NgxFormulusModule {}
