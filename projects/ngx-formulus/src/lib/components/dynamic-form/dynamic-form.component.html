@@ -1,0 +1,5 @@
+<form [formGroup]="formGroup" *ngIf="formGroup && DynamicControls && DynamicControls.length > 0">
+  <div *ngFor="let dynamicControl of DynamicControls">
+    <ngx-dynamic-input [dynamicControl]="dynamicControl"></ngx-dynamic-input>
+  </div>
+</form>

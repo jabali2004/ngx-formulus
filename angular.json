@@ -8,6 +8,14 @@
       "root": "projects/ngx-formulus",
       "sourceRoot": "projects/ngx-formulus/src",
       "prefix": "ngx",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
