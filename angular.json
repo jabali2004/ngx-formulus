@@ -46,7 +46,7 @@
             "eslintConfig": ".eslintrc.json",
             "lintFilePatterns": [
               "**/*.spec.ts",
-              "**/*.d.ts"
+              "**/*.ts"
             ]
           }
         }
@@ -159,7 +159,7 @@
             "eslintConfig": ".eslintrc.json",
             "lintFilePatterns": [
               "**/*.spec.ts",
-              "**/*.d.ts"
+              "**/*.ts"
             ]
           }
         }

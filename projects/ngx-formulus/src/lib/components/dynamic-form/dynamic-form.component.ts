@@ -1,8 +1,8 @@
 import type { OnInit } from '@angular/core';
 import { Component, Input } from '@angular/core';
-import { AbstractControl, FormControl } from '@angular/forms';
-import { FormArray, FormGroup } from '@angular/forms';
-import { DynamicControl } from '../../types/dynamic-control';
+import type { FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
+import type { DynamicControl } from '../../types/dynamic-control';
 import type { DynamicForm } from '../../types/dynamic-form';
 
 @Component({

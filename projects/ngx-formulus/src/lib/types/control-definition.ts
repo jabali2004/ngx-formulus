@@ -1,6 +1,6 @@
 import type { ControlType } from '../enums/control-type';
 
 export interface ControlDefinition {
-  data?: any;
+  data?: unknown;
   type?: ControlType | null;
 }
