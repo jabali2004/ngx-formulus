@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ControlType } from 'projects/ngx-formulus/src/lib/enums/control-type';
 import type { DynamicForm } from 'projects/ngx-formulus/src/lib/types/dynamic-form';
-import type { DynamicType } from 'projects/ngx-formulus/src/lib/types/dynamic-type';
 
 @Component({
   selector: 'app-root',
@@ -19,15 +18,17 @@ export class AppComponent implements OnInit {
     birthDate: new FormControl('', Validators.required),
   });
 
-  public dynamicForm: DynamicForm = {
-    formGroup: this.formGroup,
-    config: {
-      controls: [
-        { control: 'firstName', label: 'First Name' },
-        { control: 'birthDate', label: 'Birth Date', type: ControlType.Date },
-      ],
-    },
-  };
+  public dynamicForm: DynamicForm | undefined;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dynamicForm = {
+      formGroup: this.formGroup,
+      config: {
+        controls: [
+          { control: 'firstName', label: 'First Name' },
+          { control: 'birthDate', label: 'Birth Date', type: ControlType.Date },
+        ],
+      },
+    };
+  }
 }
