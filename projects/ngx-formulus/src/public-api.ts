@@ -10,7 +10,7 @@ export { DynamicFormsService } from './lib/services/dynamic-forms.service';
 
 // Components
 export { DynamicFormComponent } from './lib/components/dynamic-form/dynamic-form.component';
-export { DynamicInputComponent } from './lib/components/dynamic-input/dynamic-input.component';
+export { DynamicInputComponent } from './lib/components/controls/dynamic-input/dynamic-input.component';
 
 // Interfaces
 export { ControlConfig } from './lib/types/control-config';

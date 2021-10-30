@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     birthDate: new FormControl('', Validators.required),
   });
 
-  public dynamicForm: DynamicForm | undefined;
+  public dynamicForm: DynamicForm | null = null;
 
   ngOnInit(): void {
     this.dynamicForm = {
