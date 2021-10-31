@@ -1,6 +1,5 @@
 <div class="form-control" *ngIf="dynamicControl">
-  <label [for]="dynamicControl.config?.key"
-    *ngIf="dynamicControl.config?.label">{{ dynamicControl.config?.label }}</label>
-  <input [id]="dynamicControl.config?.key" [type]="dynamicControl.definition?.type || 'text'"
-    [formControl]="dynamicControl.control" *ngIf="dynamicControl.control">
+  <label [for]="dynamicControl.formControlName" *ngIf="dynamicControl.label">{{ dynamicControl.label }}</label>
+  <input [id]="dynamicControl.formControlName" [type]="dynamicControl.type || 'text'"
+    [formControl]="dynamicControl.formControl" *ngIf="dynamicControl.formControl">
 </div>

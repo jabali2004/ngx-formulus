@@ -1,6 +1,6 @@
 import type { OnInit } from '@angular/core';
 import { Component, Input } from '@angular/core';
-import type { DynamicControl } from '../../../types/dynamic-control';
+import type { IDynamicControl } from 'projects/ngx-formulus/src/public-api';
 
 @Component({
   selector: 'ngx-dynamic-input',
@@ -8,7 +8,7 @@ import type { DynamicControl } from '../../../types/dynamic-control';
   styleUrls: ['./dynamic-input.component.scss'],
 })
 export class DynamicInputComponent implements OnInit {
-  @Input() dynamicControl: DynamicControl | null = null;
+  @Input() dynamicControl: IDynamicControl | null = null;
 
   constructor() {}
 

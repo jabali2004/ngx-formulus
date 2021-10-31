@@ -1,8 +1,9 @@
 import type { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ControlType } from 'projects/ngx-formulus/src/lib/enums/control-type';
-import type { DynamicForm } from 'projects/ngx-formulus/src/lib/types/dynamic-form';
+import type { IDynamicOverride } from 'projects/ngx-formulus/src/public-api';
+import { ControlType } from 'projects/ngx-formulus/src/public-api';
+import { DynamicForm } from 'projects/ngx-formulus/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -21,14 +22,16 @@ export class AppComponent implements OnInit {
   public dynamicForm: DynamicForm | null = null;
 
   ngOnInit(): void {
-    this.dynamicForm = {
-      formGroup: this.formGroup,
-      config: {
-        controls: [
-          { control: 'firstName', label: 'First Name' },
-          { control: 'birthDate', label: 'Birth Date', type: ControlType.Date },
-        ],
+    const overrides: IDynamicOverride[] = [
+      { formControlName: 'firstName', label: 'First Name:' },
+      { formControlName: 'lastName', label: 'Last Name:' },
+      {
+        formControlName: 'birthDate',
+        label: 'Birth Date:',
+        type: ControlType.Date,
       },
-    };
+    ];
+
+    this.dynamicForm = new DynamicForm(this.formGroup, overrides);
   }
 }

@@ -1,9 +1,9 @@
 import type { FormControl } from '@angular/forms';
-import type { ControlConfig } from './control-config';
-import type { ControlDefinition } from './control-definition';
+import type { ControlType } from '../enums/control-type';
 
-export interface DynamicControl {
-  control?: FormControl;
-  definition?: ControlDefinition;
-  config?: ControlConfig;
+export interface IDynamicControl {
+  formControlName: string;
+  formControl: FormControl;
+  label?: string;
+  type?: ControlType;
 }
