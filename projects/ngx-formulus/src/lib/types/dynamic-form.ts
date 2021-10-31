@@ -1,8 +1,8 @@
 import type { FormControl, FormGroup } from '@angular/forms';
-import { ControlType } from 'ngx-formulus';
 import type { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { ControlType } from '../enums/control-type';
 import type { IDynamicControl } from './dynamic-control';
 import type { IDynamicOverride } from './dynamic-override';
 
