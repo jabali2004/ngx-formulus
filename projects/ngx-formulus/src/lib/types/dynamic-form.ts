@@ -1,13 +1,29 @@
-import type { FormControl, FormGroup } from '@angular/forms';
+import type { FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import type { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { ControlType } from '../enums/control-type';
+import type { FormStyle } from '../enums/form-style';
 import type { IDynamicControl } from './dynamic-control';
 import type { IDynamicOverride } from './dynamic-override';
 
+export interface IDynamicForm {
+  formGroup: FormGroup;
+  overrides?: IDynamicOverride[];
+  design?: FormStyle;
+  actions?: {
+    save?: boolean;
+    close?: boolean;
+  };
+}
+
 export class DynamicForm {
   private controls: IDynamicControl[] = [];
+  private overrides: IDynamicOverride[] = [];
+  private formGroup: FormGroup = new FormGroup({});
+
+  public actions: { save?: boolean; close?: boolean } = {};
 
   // Event handling
   private onSaveSubject: Subject<void> = new Subject();
@@ -17,17 +33,34 @@ export class DynamicForm {
   // Subscriptions
   private formChange: Observable<unknown> | undefined;
 
-  constructor(
-    private formGroup: FormGroup,
-    private overrides: IDynamicOverride[]
-  ) {
+  constructor(config: IDynamicForm) {
+    this.formGroup = config.formGroup;
+    this.overrides = config.overrides || [];
+    this.actions = config.actions || {};
+
     this.mapControls();
     this.initForm();
   }
 
-  public onSave(): void {}
-  public onClose(): void {}
-  public onChange(): void {}
+  public onSave(): Observable<unknown> {
+    return this.onSaveSubject.asObservable();
+  }
+
+  public onClose(): Observable<unknown> {
+    return this.onCloseSubject.asObservable();
+  }
+
+  public onChange(): Observable<unknown> {
+    return this.onChangeSubject.asObservable();
+  }
+
+  public save(): void {
+    this.onSaveSubject.next();
+  }
+
+  public close(): void {
+    this.onCloseSubject.next();
+  }
 
   public reloadLabels(): void {}
 
@@ -51,16 +84,13 @@ export class DynamicForm {
     this.formGroup.reset();
   }
 
-  public get FormGroup(): FormGroup | null {
-    return this.formGroup || null;
+  public get FormGroup(): FormGroup {
+    return this.formGroup;
   }
 
-  public get Controls(): IDynamicControl[] | null {
-    return this.controls || null;
+  public get Controls(): IDynamicControl[] {
+    return this.controls || [];
   }
-
-  private close(): void {}
-  private save(): void {}
 
   private initForm(): void {
     this.formChange = this.formGroup.valueChanges.pipe(

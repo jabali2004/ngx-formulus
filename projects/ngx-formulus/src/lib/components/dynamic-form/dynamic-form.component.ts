@@ -20,8 +20,4 @@ export class DynamicFormComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  public get DynamicControls(): IDynamicControl[] {
-    return this.data?.Controls || [];
-  }
 }

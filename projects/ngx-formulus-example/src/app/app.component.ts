@@ -32,6 +32,13 @@ export class AppComponent implements OnInit {
       },
     ];
 
-    this.dynamicForm = new DynamicForm(this.formGroup, overrides);
+    this.dynamicForm = new DynamicForm({
+      formGroup: this.formGroup,
+      overrides,
+      actions: {
+        save: true,
+        close: false,
+      },
+    });
   }
 }
