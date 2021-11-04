@@ -1,11 +1,9 @@
 import type { Component } from '@angular/core';
 import { Inject } from '@angular/core';
 import { Injectable } from '@angular/core';
-import {
-  ControlType,
-  DynamicInputComponent,
-} from 'projects/ngx-formulus/src/public-api';
 import { DynamicCheckboxComponent } from '../../components/controls/dynamic-checkbox/dynamic-checkbox.component';
+import { DynamicInputComponent } from '../../components/controls/dynamic-input/dynamic-input.component';
+import { ControlType } from '../../enums/control-type';
 import type { NgxFormulusConfig } from '../../interfaces/ngx-formulus-config';
 import { ConfigService } from '../config/config.service';
 

@@ -16,6 +16,10 @@ export { DynamicInputComponent } from './lib/components/controls/dynamic-input/d
 export { DynamicRadioComponent } from './lib/components/controls/dynamic-radio/dynamic-radio.component';
 export { DynamicSelectComponent } from './lib/components/controls/dynamic-select/dynamic-select.component';
 export { DynamicTextComponent } from './lib/components/controls/dynamic-text/dynamic-text.component';
+export { DynamicCheckboxComponent } from './lib/components/controls/dynamic-checkbox/dynamic-checkbox.component';
+
+// Directives
+export { DynamicControlDirective } from './lib/directives/dynamic-control/dynamic-control.directive';
 
 // Interfaces
 export { IDynamicControl } from './lib/interfaces/dynamic-control';

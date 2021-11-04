@@ -1,6 +1,6 @@
 import type { OnInit } from '@angular/core';
 import { Input, Component } from '@angular/core';
-import type { IDynamicControl } from 'projects/ngx-formulus/src/public-api';
+import type { IDynamicControl } from '../../../interfaces/dynamic-control';
 
 @Component({
   selector: 'ngx-base-control',

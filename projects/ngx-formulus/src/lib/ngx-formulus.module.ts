@@ -1,4 +1,5 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import type { ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DynamicInputComponent } from './components/controls/dynamic-input/dynamic-input.component';
@@ -9,7 +10,7 @@ import { DynamicCheckboxComponent } from './components/controls/dynamic-checkbox
 import { DynamicTextComponent } from './components/controls/dynamic-text/dynamic-text.component';
 import { BaseControlComponent } from './components/controls/base-control/base-control.component';
 import { ConfigService } from './services/config/config.service';
-import { NgxFormulusConfig } from './interfaces/ngx-formulus-config';
+import type { NgxFormulusConfig } from './interfaces/ngx-formulus-config';
 import { DynamicControlDirective } from './directives/dynamic-control/dynamic-control.directive';
 
 @NgModule({

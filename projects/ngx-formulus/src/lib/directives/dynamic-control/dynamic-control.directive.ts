@@ -4,7 +4,6 @@ import type { IDynamicControl } from '../../interfaces/dynamic-control';
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import {
   Input,
-  Component,
   ComponentRef,
   ComponentFactoryResolver,
   ViewContainerRef,
