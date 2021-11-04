@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DynamicFormsService } from './dynamic-forms.service';
+import { TemplateService } from './template.service';
 
-describe('DynamicFormsService', () => {
-  let service: DynamicFormsService;
+describe('TemplateService', () => {
+  let service: TemplateService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DynamicFormsService);
+    service = TestBed.inject(TemplateService);
   });
 
   it('should be created', () => {

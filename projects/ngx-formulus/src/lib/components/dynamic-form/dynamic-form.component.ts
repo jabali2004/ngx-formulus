@@ -1,8 +1,8 @@
 import type { OnInit } from '@angular/core';
 import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import type { IDynamicControl } from '../../types/dynamic-control';
-import type { DynamicForm } from '../../types/dynamic-form';
+import type { IDynamicControl } from '../../interfaces/dynamic-control';
+import type { DynamicForm } from '../../classes/dynamic-form';
 
 @Component({
   selector: 'ngx-dynamic-form',

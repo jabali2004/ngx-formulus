@@ -4,20 +4,9 @@ import type { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { ControlType } from '../enums/control-type';
-import type { FormStyle } from '../enums/form-style';
-import type { IDynamicControl } from './dynamic-control';
-import type { IDynamicOverride } from './dynamic-override';
-
-export interface IDynamicForm {
-  formGroup: FormGroup;
-  overrides?: IDynamicOverride[];
-  design?: FormStyle;
-  actions?: {
-    save?: boolean;
-    close?: boolean;
-  };
-}
-
+import type { IDynamicControl } from '../interfaces/dynamic-control';
+import type { IDynamicForm } from '../interfaces/dynamic-form';
+import type { IDynamicOverride } from '../interfaces/dynamic-override';
 export class DynamicForm {
   private controls: IDynamicControl[] = [];
   private overrides: IDynamicOverride[] = [];

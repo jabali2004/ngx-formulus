@@ -1,11 +1,13 @@
-<form [formGroup]="data.FormGroup" *ngIf="data && data.FormGroup && data.Controls && data.Controls.length > 0">
-  <div *ngFor="let dynamicControl of data.Controls">
-    <ngx-dynamic-input [dynamicControl]="dynamicControl"></ngx-dynamic-input>
-  </div>
+<ng-container *ngIf="data">
+  <form [formGroup]="data.FormGroup" *ngIf="data && data.FormGroup && data.Controls && data.Controls.length > 0">
+    <div *ngFor="let dynamicControl of data.Controls">
+      <ng-container ngxDynamicControl [dynamicControl]="dynamicControl"></ng-container>
+    </div>
 
-  <div *ngIf="data?.actions">
-    <button *ngIf="data?.actions?.save" (click)="data?.save()">Save</button>
-    <button *ngIf="data?.actions?.close" (click)="data?.close()">Close</button>
-    <!-- TODO: Add reset button -->
-  </div>
-</form>
+    <div *ngIf="data?.actions">
+      <button *ngIf="data?.actions?.save" (click)="data?.save()">Save</button>
+      <button *ngIf="data?.actions?.close" (click)="data?.close()">Close</button>
+      <!-- TODO: Add reset button -->
+    </div>
+  </form>
+</ng-container>

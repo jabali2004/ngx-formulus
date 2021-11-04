@@ -6,6 +6,11 @@ import { NgxFormulusModule } from 'projects/ngx-formulus/src/public-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import type { NgxFormulusConfig } from 'projects/ngx-formulus/src/lib/interfaces/ngx-formulus-config';
+
+const formulusConfig: NgxFormulusConfig = {
+  test: 'Hello World!',
+};
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxFormulusModule,
+    NgxFormulusModule.forRoot(formulusConfig),
     NgbModule,
   ],
   providers: [],
