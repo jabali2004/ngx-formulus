@@ -31,7 +31,19 @@ import { TimepickerControlComponent } from './components/controls/timepicker-con
     TimepickerControlComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule, FormsModule],
-  exports: [DynamicFormComponent],
+  exports: [
+    DynamicFormComponent,
+    BaseControlComponent,
+    InputControlComponent,
+    CheckboxControlComponent,
+    DatepickerControlComponent,
+    RadioControlComponent,
+    SelectControlComponent,
+    TextControlComponent,
+    TimepickerControlComponent,
+    ToggleControlComponent,
+    TextControlComponent,
+  ],
 })
 export class NgxFormulusModule {
   static forRoot(

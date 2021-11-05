@@ -11,7 +11,7 @@ export { TemplateService } from './lib/services/template/template.service';
 // Components
 export { DynamicFormComponent } from './lib/components/dynamic-form/dynamic-form.component';
 // TODO: Check if export is really needed
-// export { BaseControlComponent } from './lib/components/controls/base-control/base-control.component';
+export { BaseControlComponent } from './lib/components/controls/base-control/base-control.component';
 export { InputControlComponent } from './lib/components/controls/input-control/input-control.component';
 export { CheckboxControlComponent } from './lib/components/controls/checkbox-control/checkbox-control.component';
 export { DatepickerControlComponent } from './lib/components/controls/datepicker-control/datepicker-control.component';
