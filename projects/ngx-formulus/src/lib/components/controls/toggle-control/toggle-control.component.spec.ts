@@ -1,21 +1,21 @@
 import type { ComponentFixture} from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 
-import { DynamicTextComponent } from './dynamic-text.component';
+import { ToggleControlComponent } from './toggle-control.component';
 
-describe('DynamicTextComponent', () => {
-  let component: DynamicTextComponent;
-  let fixture: ComponentFixture<DynamicTextComponent>;
+describe('ToggleControlComponent', () => {
+  let component: ToggleControlComponent;
+  let fixture: ComponentFixture<ToggleControlComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DynamicTextComponent ]
+      declarations: [ ToggleControlComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DynamicTextComponent);
+    fixture = TestBed.createComponent(ToggleControlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

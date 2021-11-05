@@ -1,21 +1,21 @@
 import type { ComponentFixture} from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 
-import { DynamicRadioComponent } from './dynamic-radio.component';
+import { TimepickerControlComponent } from './timepicker-control.component';
 
-describe('DynamicRadioComponent', () => {
-  let component: DynamicRadioComponent;
-  let fixture: ComponentFixture<DynamicRadioComponent>;
+describe('TimepickerControlComponent', () => {
+  let component: TimepickerControlComponent;
+  let fixture: ComponentFixture<TimepickerControlComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DynamicRadioComponent ]
+      declarations: [ TimepickerControlComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DynamicRadioComponent);
+    fixture = TestBed.createComponent(TimepickerControlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

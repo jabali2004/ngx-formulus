@@ -12,11 +12,14 @@ export { TemplateService } from './lib/services/template/template.service';
 export { DynamicFormComponent } from './lib/components/dynamic-form/dynamic-form.component';
 // TODO: Check if export is really needed
 // export { BaseControlComponent } from './lib/components/controls/base-control/base-control.component';
-export { DynamicInputComponent } from './lib/components/controls/dynamic-input/dynamic-input.component';
-export { DynamicRadioComponent } from './lib/components/controls/dynamic-radio/dynamic-radio.component';
-export { DynamicSelectComponent } from './lib/components/controls/dynamic-select/dynamic-select.component';
-export { DynamicTextComponent } from './lib/components/controls/dynamic-text/dynamic-text.component';
-export { DynamicCheckboxComponent } from './lib/components/controls/dynamic-checkbox/dynamic-checkbox.component';
+export { InputControlComponent } from './lib/components/controls/input-control/input-control.component';
+export { CheckboxControlComponent } from './lib/components/controls/checkbox-control/checkbox-control.component';
+export { DatepickerControlComponent } from './lib/components/controls/datepicker-control/datepicker-control.component';
+export { RadioControlComponent } from './lib/components/controls/radio-control/radio-control.component';
+export { SelectControlComponent } from './lib/components/controls/select-control/select-control.component';
+export { TextControlComponent } from './lib/components/controls/text-control/text-control.component';
+export { TimepickerControlComponent } from './lib/components/controls/timepicker-control/timepicker-control.component';
+export { ToggleControlComponent } from './lib/components/controls/toggle-control/toggle-control.component';
 
 // Directives
 export { DynamicControlDirective } from './lib/directives/dynamic-control/dynamic-control.directive';

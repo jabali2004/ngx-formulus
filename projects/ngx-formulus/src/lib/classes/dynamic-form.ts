@@ -108,10 +108,10 @@ export class DynamicForm {
 
       if (controlOverride) {
         newControl.label = controlOverride.label || formControlName;
-        newControl.type = controlOverride.type || ControlType.String;
+        newControl.type = controlOverride.type || ControlType.Input;
       } else {
         newControl.label = formControlName;
-        newControl.type = ControlType.String;
+        newControl.type = ControlType.Input;
       }
 
       tempControls.push(newControl);

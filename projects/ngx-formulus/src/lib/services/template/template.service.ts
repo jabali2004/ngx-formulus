@@ -1,17 +1,20 @@
 import type { Component } from '@angular/core';
 import { Inject } from '@angular/core';
 import { Injectable } from '@angular/core';
-import { DynamicCheckboxComponent } from '../../components/controls/dynamic-checkbox/dynamic-checkbox.component';
-import { DynamicInputComponent } from '../../components/controls/dynamic-input/dynamic-input.component';
 import { ControlType } from '../../enums/control-type';
-import type { NgxFormulusConfig } from '../../interfaces/ngx-formulus-config';
 import { ConfigService } from '../config/config.service';
+import type { NgxFormulusConfig } from '../../interfaces/ngx-formulus-config';
+import { InputControlComponent } from '../../components/controls/input-control/input-control.component';
+import { RadioControlComponent } from '../../components/controls/radio-control/radio-control.component';
+import { SelectControlComponent } from '../../components/controls/select-control/select-control.component';
+import { TextControlComponent } from '../../components/controls/text-control/text-control.component';
+import { CheckboxControlComponent } from '../../components/controls/checkbox-control/checkbox-control.component';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TemplateService {
-  private templates: { [id: string]: unknown } = {};
+  private templates: { [id: string]: Component } = {};
 
   public readonly config: NgxFormulusConfig;
 
@@ -20,15 +23,28 @@ export class TemplateService {
 
     this.setDefaultTemplates();
     this.mapTemplates();
-
-    console.log(this.templates);
   }
 
+  /**
+   * Set all default templates for each component
+   */
   private setDefaultTemplates(): void {
-    this.templates['DynamicInputComponent'] = DynamicInputComponent;
-    this.templates['DynamicCheckBoxComponent'] = DynamicCheckboxComponent;
+    // Input
+    this.templates[ControlType.Input] = InputControlComponent as Component;
+    // Checkbox
+    this.templates[ControlType.Checkbox] =
+      CheckboxControlComponent as Component;
+    // Radio
+    this.templates[ControlType.Radio] = RadioControlComponent as Component;
+    // Select
+    this.templates[ControlType.Select] = SelectControlComponent as Component;
+    // Text
+    this.templates[ControlType.Text] = TextControlComponent as Component;
   }
 
+  /**
+   * Map all templates
+   */
   private mapTemplates(): void {
     if (this.config.templates) {
       for (const templateName in this.config.templates) {
@@ -38,22 +54,22 @@ export class TemplateService {
     }
   }
 
-  private getInputComponent(): Component {
-    return this.templates['DynamicInputComponent'] as Component;
+  /**
+   * Get component by ControlType
+   * @param type
+   * @returns Component
+   */
+  private getComponentByType(type: ControlType): Component {
+    return this.templates[type] as Component;
   }
 
-  private getCheckBoxComponent(): Component {
-    return this.templates['DynamicCheckBoxComponent'] as Component;
-  }
-
+  /**
+   * Get component by ControlType
+   * @param controlType
+   * @returns Component
+   */
   public getComponent(controlType: ControlType): Component {
-    switch (controlType) {
-      case ControlType.String || ControlType.Password || ControlType.Number:
-        return this.getInputComponent();
-
-      default:
-        return this.getInputComponent();
-    }
+    return this.getComponentByType(controlType);
   }
 
   // TODO: Add template functionality for every component

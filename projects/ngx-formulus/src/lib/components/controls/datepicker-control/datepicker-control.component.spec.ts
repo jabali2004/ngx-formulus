@@ -1,21 +1,21 @@
 import type { ComponentFixture} from '@angular/core/testing';
 import { TestBed } from '@angular/core/testing';
 
-import { DynamicCheckboxComponent } from './dynamic-checkbox.component';
+import { DatepickerControlComponent } from './datepicker-control.component';
 
-describe('DynamicCheckboxComponent', () => {
-  let component: DynamicCheckboxComponent;
-  let fixture: ComponentFixture<DynamicCheckboxComponent>;
+describe('DatepickerControlComponent', () => {
+  let component: DatepickerControlComponent;
+  let fixture: ComponentFixture<DatepickerControlComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DynamicCheckboxComponent ]
+      declarations: [ DatepickerControlComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DynamicCheckboxComponent);
+    fixture = TestBed.createComponent(DatepickerControlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

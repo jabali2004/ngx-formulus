@@ -2,34 +2,36 @@ import type { ModuleWithProviders } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DynamicInputComponent } from './components/controls/dynamic-input/dynamic-input.component';
-import { DynamicSelectComponent } from './components/controls/dynamic-select/dynamic-select.component';
 import { CommonModule } from '@angular/common';
-import { DynamicRadioComponent } from './components/controls/dynamic-radio/dynamic-radio.component';
-import { DynamicCheckboxComponent } from './components/controls/dynamic-checkbox/dynamic-checkbox.component';
-import { DynamicTextComponent } from './components/controls/dynamic-text/dynamic-text.component';
 import { BaseControlComponent } from './components/controls/base-control/base-control.component';
 import { ConfigService } from './services/config/config.service';
 import type { NgxFormulusConfig } from './interfaces/ngx-formulus-config';
 import { DynamicControlDirective } from './directives/dynamic-control/dynamic-control.directive';
+import { InputControlComponent } from './components/controls/input-control/input-control.component';
+import { CheckboxControlComponent } from './components/controls/checkbox-control/checkbox-control.component';
+import { RadioControlComponent } from './components/controls/radio-control/radio-control.component';
+import { SelectControlComponent } from './components/controls/select-control/select-control.component';
+import { ToggleControlComponent } from './components/controls/toggle-control/toggle-control.component';
+import { TextControlComponent } from './components/controls/text-control/text-control.component';
+import { DatepickerControlComponent } from './components/controls/datepicker-control/datepicker-control.component';
+import { TimepickerControlComponent } from './components/controls/timepicker-control/timepicker-control.component';
 
 @NgModule({
   declarations: [
     DynamicFormComponent,
     BaseControlComponent,
-    DynamicInputComponent,
-    DynamicSelectComponent,
-    DynamicRadioComponent,
-    DynamicCheckboxComponent,
-    DynamicTextComponent,
     DynamicControlDirective,
+    InputControlComponent,
+    CheckboxControlComponent,
+    RadioControlComponent,
+    SelectControlComponent,
+    ToggleControlComponent,
+    TextControlComponent,
+    DatepickerControlComponent,
+    TimepickerControlComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule, FormsModule],
-  exports: [
-    DynamicFormComponent,
-    DynamicInputComponent,
-    DynamicCheckboxComponent,
-  ],
+  exports: [DynamicFormComponent],
 })
 export class NgxFormulusModule {
   static forRoot(

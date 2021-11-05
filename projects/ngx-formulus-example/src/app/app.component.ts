@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
       {
         formControlName: 'birthDate',
         label: 'Birth Date:',
-        type: ControlType.Date,
+        type: ControlType.Input,
       },
     ];
 
