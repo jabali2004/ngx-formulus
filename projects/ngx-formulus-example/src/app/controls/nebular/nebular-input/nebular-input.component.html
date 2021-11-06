@@ -1,0 +1,4 @@
+<div class="nb-theme-default" *ngIf="dynamicControl">
+  <input nbInput [id]="dynamicControl.formControlName" type="text" [placeholder]="dynamicControl.label"
+    *ngIf="dynamicControl.formControl" [formControl]="dynamicControl.formControl">
+</div>

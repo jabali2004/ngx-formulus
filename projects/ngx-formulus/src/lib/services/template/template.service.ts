@@ -72,5 +72,14 @@ export class TemplateService {
     return this.getComponentByType(controlType);
   }
 
+  /**
+   * Inject component for specific template
+   * @param template
+   * @param controlType
+   */
+  public setTemplate(template: Component, controlType: ControlType): void {
+    this.templates[controlType] = template;
+  }
+
   // TODO: Add template functionality for every component
 }

@@ -80,6 +80,9 @@
               "projects/ngx-formulus-example/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/@nebular/theme/styles/prebuilt/default.css",
+              "./node_modules/@nebular/theme/styles/prebuilt/dark.css",
               "projects/ngx-formulus-example/src/styles.scss"
             ],
             "scripts": []
@@ -89,13 +92,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "8kb",
+                  "maximumError": "16kb"
                 }
               ],
               "fileReplacements": [
@@ -148,6 +151,8 @@
               "projects/ngx-formulus-example/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/@nebular/theme/styles/prebuilt/default.css",
               "projects/ngx-formulus-example/src/styles.scss"
             ],
             "scripts": []

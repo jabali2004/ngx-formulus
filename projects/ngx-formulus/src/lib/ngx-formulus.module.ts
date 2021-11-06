@@ -15,6 +15,7 @@ import { ToggleControlComponent } from './components/controls/toggle-control/tog
 import { TextControlComponent } from './components/controls/text-control/text-control.component';
 import { DatepickerControlComponent } from './components/controls/datepicker-control/datepicker-control.component';
 import { TimepickerControlComponent } from './components/controls/timepicker-control/timepicker-control.component';
+import { NbInputModule, NbThemeModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,13 @@ import { TimepickerControlComponent } from './components/controls/timepicker-con
     DatepickerControlComponent,
     TimepickerControlComponent,
   ],
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    NbThemeModule,
+    NbInputModule,
+  ],
   exports: [
     DynamicFormComponent,
     BaseControlComponent,
