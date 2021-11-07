@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.3 (2021-11-07)
+
+
+### Features
+
+* add option to hide or disable a specific control ([72827a9](https://github.com/jabali2004/ngx-formulus/commit/72827a95a160d0bd99245bbae34320f478fc30e1))
+
 ### 0.0.2 (2021-11-07)
 
 
