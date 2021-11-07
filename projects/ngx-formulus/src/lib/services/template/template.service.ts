@@ -46,7 +46,7 @@ export class TemplateService {
    * Map all templates
    */
   private mapTemplates(): void {
-    if (this.config.templates) {
+    if (this.config && this.config.templates) {
       for (const templateName in this.config.templates) {
         const template = this.config.templates[templateName];
         this.templates[templateName] = template;
