@@ -9,6 +9,8 @@ import { RadioControlComponent } from '../../components/controls/radio-control/r
 import { SelectControlComponent } from '../../components/controls/select-control/select-control.component';
 import { TextControlComponent } from '../../components/controls/text-control/text-control.component';
 import { CheckboxControlComponent } from '../../components/controls/checkbox-control/checkbox-control.component';
+import { SaveButtonComponent } from '../../components/form-elements/save-button/save-button.component';
+import { CloseButtonComponent } from '../../components/form-elements/close-button/close-button.component';
 
 @Injectable({
   providedIn: 'root',
@@ -40,6 +42,10 @@ export class TemplateService {
     this.templates[ControlType.Select] = SelectControlComponent as Component;
     // Text
     this.templates[ControlType.Text] = TextControlComponent as Component;
+
+    // Form specific components
+    this.templates[ControlType.SaveButton] = SaveButtonComponent as Component;
+    this.templates[ControlType.CloseButton] = CloseButtonComponent as Component;
   }
 
   /**

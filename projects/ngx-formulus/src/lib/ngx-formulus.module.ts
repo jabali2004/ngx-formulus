@@ -15,13 +15,16 @@ import { ToggleControlComponent } from './components/controls/toggle-control/tog
 import { TextControlComponent } from './components/controls/text-control/text-control.component';
 import { DatepickerControlComponent } from './components/controls/datepicker-control/datepicker-control.component';
 import { TimepickerControlComponent } from './components/controls/timepicker-control/timepicker-control.component';
-import { NbInputModule, NbThemeModule } from '@nebular/theme';
+import { SaveButtonComponent } from './components/form-elements/save-button/save-button.component';
+import { CloseButtonComponent } from './components/form-elements/close-button/close-button.component';
+import { FormControlDirective } from './directives/form-control/form-control.directive';
 
 @NgModule({
   declarations: [
     DynamicFormComponent,
     BaseControlComponent,
     DynamicControlDirective,
+    FormControlDirective,
     InputControlComponent,
     CheckboxControlComponent,
     RadioControlComponent,
@@ -30,14 +33,10 @@ import { NbInputModule, NbThemeModule } from '@nebular/theme';
     TextControlComponent,
     DatepickerControlComponent,
     TimepickerControlComponent,
+    SaveButtonComponent,
+    CloseButtonComponent,
   ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FormsModule,
-    NbThemeModule,
-    NbInputModule,
-  ],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   exports: [
     DynamicFormComponent,
     BaseControlComponent,

@@ -18,6 +18,7 @@ import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NebularInputComponent } from './controls/nebular/nebular-input/nebular-input.component';
 import { ControlsModule } from './controls/controls.module';
+import { NebularSaveButtonComponent } from './controls/nebular/nebular-save-button/nebular-save-button.component';
 
 const formulusConfig: NgxFormulusConfig = {
   // templates: {
@@ -48,6 +49,11 @@ export class AppModule {
     this.templateService.setTemplate(
       NebularInputComponent as Component,
       ControlType.Input
+    );
+
+    this.templateService.setTemplate(
+      NebularSaveButtonComponent as Component,
+      ControlType.SaveButton
     );
   }
 }

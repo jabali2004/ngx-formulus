@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
       overrides,
       actions: {
         save: true,
-        close: false,
+        close: true,
       },
     });
   }

@@ -21,8 +21,12 @@ export { TextControlComponent } from './lib/components/controls/text-control/tex
 export { TimepickerControlComponent } from './lib/components/controls/timepicker-control/timepicker-control.component';
 export { ToggleControlComponent } from './lib/components/controls/toggle-control/toggle-control.component';
 
+export { SaveButtonComponent } from './lib/components/form-elements/save-button/save-button.component';
+export { CloseButtonComponent } from './lib/components/form-elements/close-button/close-button.component';
+
 // Directives
 export { DynamicControlDirective } from './lib/directives/dynamic-control/dynamic-control.directive';
+export { FormControlDirective } from './lib/directives/form-control/form-control.directive';
 
 // Interfaces
 export { IDynamicControl } from './lib/interfaces/dynamic-control';
