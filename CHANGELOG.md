@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.2 (2021-11-07)
+
+
+### Bug Fixes
+
+* make  module config optional ([80176f5](https://github.com/jabali2004/ngx-formulus/commit/80176f51d893d98a54973c2f43d4ed3ba3a99c52))
+
 ### 0.0.1 (2021-11-07)
 
 
