@@ -1,5 +1,6 @@
-<div class="form-control" *ngIf="dynamicControl">
+<div class="form-control" *ngIf="dynamicControl && !dynamicControl.hidden">
   <label [for]="dynamicControl.formControlName" *ngIf="dynamicControl.label">{{ dynamicControl.label }}</label>
   <input [id]="dynamicControl.formControlName" [type]="dynamicControl.type || 'text'"
-    [formControl]="dynamicControl.formControl" *ngIf="dynamicControl.formControl">
+    [formControl]="dynamicControl.formControl" *ngIf="dynamicControl.formControl" [attr.disabled]="dynamicControl.disabled ? '' :
+    null">
 </div>

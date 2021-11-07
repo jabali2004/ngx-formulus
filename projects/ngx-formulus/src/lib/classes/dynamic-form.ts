@@ -100,6 +100,8 @@ export class DynamicForm {
       const newControl: IDynamicControl = {
         formControl,
         formControlName,
+        disabled: false,
+        hidden: false,
       };
 
       const controlOverride = this.overrides.find(
@@ -109,6 +111,8 @@ export class DynamicForm {
       if (controlOverride) {
         newControl.label = controlOverride.label || formControlName;
         newControl.type = controlOverride.type || ControlType.Input;
+        newControl.disabled = controlOverride.disabled || false;
+        newControl.hidden = controlOverride.hidden || false;
       } else {
         newControl.label = formControlName;
         newControl.type = ControlType.Input;

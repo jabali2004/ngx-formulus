@@ -4,4 +4,6 @@ export interface IDynamicOverride {
   formControlName?: string;
   label?: string;
   type?: ControlType;
+  disabled?: boolean;
+  hidden?: boolean;
 }

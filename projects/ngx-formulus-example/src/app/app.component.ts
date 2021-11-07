@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
     birthDate: new FormControl('', Validators.required),
+    disabledControl: new FormControl(''),
+    hiddenControl: new FormControl(''),
   });
 
   public dynamicForm: DynamicForm | null = null;
@@ -29,6 +31,20 @@ export class AppComponent implements OnInit {
         formControlName: 'birthDate',
         label: 'Birth Date:',
         type: ControlType.Input,
+      },
+      {
+        formControlName: 'disabledControl',
+        label: 'Control (Disabled)',
+        type: ControlType.Input,
+        hidden: false,
+        disabled: true,
+      },
+      {
+        formControlName: 'hiddenControl',
+        label: 'Control (Hidden)',
+        type: ControlType.Input,
+        hidden: true,
+        disabled: false,
       },
     ];
 

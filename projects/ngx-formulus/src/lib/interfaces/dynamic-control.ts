@@ -6,4 +6,6 @@ export interface IDynamicControl {
   formControl: FormControl;
   label?: string;
   type?: ControlType;
+  disabled: boolean;
+  hidden: boolean;
 }

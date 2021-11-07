@@ -19,7 +19,11 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NebularInputComponent } from './controls/nebular/nebular-input/nebular-input.component';
 import { ControlsModule } from './controls/controls.module';
 
-const formulusConfig: NgxFormulusConfig = {};
+const formulusConfig: NgxFormulusConfig = {
+  // templates: {
+  //   input: NebularInputComponent as Component,
+  // },
+};
 
 @NgModule({
   declarations: [AppComponent],
