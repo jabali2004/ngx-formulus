@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.4 (2021-11-07)
+
+
+### Features
+
+* add form controls (save and close button) ([23d6041](https://github.com/jabali2004/ngx-formulus/commit/23d6041274ccb3faf4580081531ab642a484fc57))
+
 ### 0.0.3 (2021-11-07)
 
 
