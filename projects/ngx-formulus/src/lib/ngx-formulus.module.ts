@@ -54,7 +54,7 @@ import { NbInputModule, NbThemeModule } from '@nebular/theme';
 })
 export class NgxFormulusModule {
   static forRoot(
-    config: NgxFormulusConfig
+    config?: NgxFormulusConfig
   ): ModuleWithProviders<NgxFormulusModule> {
     return {
       ngModule: NgxFormulusModule,
