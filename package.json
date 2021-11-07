@@ -1,6 +1,6 @@
 {
   "name": "ngx-formulus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NgxFormulus is an Angular library designed to simplify the creation of dynamic forms.",
   "repository": {
     "type": "git",
