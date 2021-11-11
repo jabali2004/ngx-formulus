@@ -60,7 +60,7 @@
     "@angular/cli": "~12.2.12",
     "@angular/compiler-cli": "~12.2.0",
     "@compodoc/compodoc": "^1.1.15",
-    "@schematics/angular": "~12.2.12",
+    "@schematics/angular": "~13.0.2",
     "@types/jasmine": "~3.10.2",
     "@types/node": "^16.11.7",
     "@typescript-eslint/eslint-plugin": "4.33.0",
