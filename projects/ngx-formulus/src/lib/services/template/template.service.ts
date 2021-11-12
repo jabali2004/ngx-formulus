@@ -28,6 +28,33 @@ export class TemplateService {
   }
 
   /**
+   * Get component by ControlType
+   * @param controlType
+   * @returns Component
+   */
+  public getComponent(controlType: ControlType): Component {
+    return this.getComponentByType(controlType);
+  }
+
+  /**
+   * Inject component for specific template
+   * @param template
+   * @param controlType
+   */
+  public setTemplate(template: Component, controlType: ControlType): void {
+    this.templates[controlType] = template;
+  }
+
+  /**
+   * Get all registered templates
+   */
+  public get RegisteredTemplates(): { [id: string]: Component } {
+    return this.templates;
+  }
+
+  // TODO: Add template functionality for every component
+
+  /**
    * Set all default templates for each component
    */
   private setDefaultTemplates(): void {
@@ -68,24 +95,4 @@ export class TemplateService {
   private getComponentByType(type: ControlType): Component {
     return this.templates[type] as Component;
   }
-
-  /**
-   * Get component by ControlType
-   * @param controlType
-   * @returns Component
-   */
-  public getComponent(controlType: ControlType): Component {
-    return this.getComponentByType(controlType);
-  }
-
-  /**
-   * Inject component for specific template
-   * @param template
-   * @param controlType
-   */
-  public setTemplate(template: Component, controlType: ControlType): void {
-    this.templates[controlType] = template;
-  }
-
-  // TODO: Add template functionality for every component
 }
