@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.5 (2021-11-12)
+
+
+### Features
+
+* **templateing:** add func for getting all registered templates ([074fdf6](https://github.com/jabali2004/ngx-formulus/commit/074fdf601af03cbe010b06c60c42589c0a3110c7))
+
 ### 0.0.4 (2021-11-07)
 
 
