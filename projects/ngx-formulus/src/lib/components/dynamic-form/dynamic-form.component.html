@@ -6,7 +6,7 @@
 
     <div class="d-flex" *ngIf="data?.actions">
       <div (click)="data.save()">
-        <ng-container *ngIf="data?.actions?.close" ngxFormControl [formControlType]="'save-button'">
+        <ng-container *ngIf="data?.actions?.save" ngxFormControl [formControlType]="'save-button'">
         </ng-container>
       </div>
 
