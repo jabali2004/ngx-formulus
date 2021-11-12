@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/jabali2004/ngx-formulus/compare/v0.0.4...v0.0.5) (2021-11-12)
+
+
+### Features
+
+* **templateing:** add func for getting all registered templates ([074fdf6](https://github.com/jabali2004/ngx-formulus/commit/074fdf601af03cbe010b06c60c42589c0a3110c7))
+
+
+### Bug Fixes
+
+* save button check ([428aebc](https://github.com/jabali2004/ngx-formulus/commit/428aebc55951dc1d653c3121da220b4ee4ac8104))
+
+
+### Chores
+
+* **deps-dev:** bump @types/node from 16.11.6 to 16.11.7 ([86bdab3](https://github.com/jabali2004/ngx-formulus/commit/86bdab3c1e82b5ca3f209dfe85b4b4f935b3854c))
+* **deps-dev:** bump karma from 6.3.7 to 6.3.8 ([5084392](https://github.com/jabali2004/ngx-formulus/commit/508439267ffd770d60fd509634a4c6ff0cfa7ff8))
+
 ### 0.0.4 (2021-11-07)
 
 
