@@ -56,5 +56,13 @@ export class AppComponent implements OnInit {
         close: true,
       },
     });
+
+    this.dynamicForm.onClose().subscribe(() => {
+      console.log('Close clicked');
+    });
+
+    this.dynamicForm.onSave().subscribe(() => {
+      console.log('Save clicked');
+    });
   }
 }
