@@ -11,6 +11,7 @@ export class BaseControlComponent implements OnInit {
   @Input() dynamicControl: IDynamicControl = {
     formControl: new FormControl(),
     formControlName: '',
+    fullWidth: false,
     hidden: false,
     disabled: false,
   };

@@ -100,6 +100,7 @@ export class DynamicForm {
       const newControl: IDynamicControl = {
         formControl,
         formControlName,
+        fullWidth: false,
         disabled: false,
         hidden: false,
       };
@@ -111,6 +112,7 @@ export class DynamicForm {
       if (controlOverride) {
         newControl.label = controlOverride.label || formControlName;
         newControl.type = controlOverride.type || ControlType.Input;
+        newControl.fullWidth = controlOverride.fullWidth || false;
         newControl.disabled = controlOverride.disabled || false;
         newControl.hidden = controlOverride.hidden || false;
       } else {

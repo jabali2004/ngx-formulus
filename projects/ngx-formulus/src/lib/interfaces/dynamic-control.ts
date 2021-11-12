@@ -6,6 +6,7 @@ export interface IDynamicControl {
   formControl: FormControl;
   label?: string;
   type?: ControlType;
+  fullWidth: boolean;
   disabled: boolean;
   hidden: boolean;
 }

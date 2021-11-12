@@ -25,7 +25,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     const overrides: IDynamicOverride[] = [
-      { formControlName: 'firstName', label: 'First Name:' },
+      {
+        formControlName: 'firstName',
+        label: 'First Name:',
+        fullWidth: true,
+      },
       { formControlName: 'lastName', label: 'Last Name:' },
       {
         formControlName: 'birthDate',

@@ -1,5 +1,6 @@
 <div class="nb-theme-default" *ngIf="dynamicControl && !dynamicControl.hidden">
-  <input nbInput [id]="dynamicControl.formControlName" type="text" [placeholder]="dynamicControl.label"
-    *ngIf="dynamicControl.formControl" [formControl]="dynamicControl.formControl" [attr.disabled]="dynamicControl.disabled ? '' :
+  <input nbInput [fullWidth]="dynamicControl.fullWidth" [id]="dynamicControl.formControlName" type="text"
+    [placeholder]="dynamicControl.label" *ngIf="dynamicControl.formControl" [formControl]="dynamicControl.formControl"
+    [attr.disabled]="dynamicControl.disabled ? '' :
     null">
 </div>
