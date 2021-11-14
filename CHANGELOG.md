@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.6 (2021-11-14)
+
+
+### Features
+
+* **form-elements:** add reset button ([eb9af0c](https://github.com/jabali2004/ngx-formulus/commit/eb9af0c16dcc15431d025a9e123e6cd6646803bb))
+
 ### [0.0.5](https://github.com/jabali2004/ngx-formulus/compare/v0.0.4...v0.0.5) (2021-11-12)
 
 
