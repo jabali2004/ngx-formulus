@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/jabali2004/ngx-formulus/compare/v0.0.5...v0.0.6) (2021-11-14)
+
+
+### Features
+
+* add fullWidth property to control ([2c8c0de](https://github.com/jabali2004/ngx-formulus/commit/2c8c0de3f7a979a7ab950b300ab025e283a7e7d9))
+* **form-elements:** add reset button ([eb9af0c](https://github.com/jabali2004/ngx-formulus/commit/eb9af0c16dcc15431d025a9e123e6cd6646803bb))
+
+
+### Chores
+
+* **example:** add onClose and onSave hooks ([71acc69](https://github.com/jabali2004/ngx-formulus/commit/71acc69deddaf765cb0949c2a4b7807452cc69bf))
+
 ### [0.0.5](https://github.com/jabali2004/ngx-formulus/compare/v0.0.4...v0.0.5) (2021-11-12)
 
 
