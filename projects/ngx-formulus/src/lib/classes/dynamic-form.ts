@@ -24,7 +24,7 @@ export class DynamicForm {
   private formChange: Observable<unknown> | undefined;
 
   constructor(config: IDynamicForm) {
-    this.formGroup = config.formGroup;
+    this.formGroup = config.formGroup || new FormGroup({});
     this.overrides = config.overrides || [];
     this.actions = config.actions || {};
 
@@ -36,7 +36,7 @@ export class DynamicForm {
    * Get observable for save event
    * @returns Observable
    */
-  public onSave(): Observable<unknown> {
+  public get onSave(): Observable<unknown> {
     return this.onSaveSubject.asObservable();
   }
 
@@ -44,7 +44,7 @@ export class DynamicForm {
    * Get observable for close event
    * @returns Observable
    */
-  public onClose(): Observable<unknown> {
+  public get onClose(): Observable<unknown> {
     return this.onCloseSubject.asObservable();
   }
 
@@ -52,7 +52,7 @@ export class DynamicForm {
    * Get observable for reset event
    * @returns Observable
    */
-  public onReset(): Observable<unknown> {
+  public get onReset(): Observable<unknown> {
     return this.onResetSubject.asObservable();
   }
 
