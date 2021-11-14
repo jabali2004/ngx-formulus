@@ -42,6 +42,12 @@ export class FormControlDirective {
           ) as Type<unknown>;
           break;
 
+        case ControlType.ResetButton:
+          component = this.templateService.getComponent(
+            ControlType.ResetButton
+          ) as Type<unknown>;
+          break;
+
         default:
           component = Component as Type<unknown>;
           break;

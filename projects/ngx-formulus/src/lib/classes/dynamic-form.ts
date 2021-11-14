@@ -12,11 +12,12 @@ export class DynamicForm {
   private overrides: IDynamicOverride[] = [];
   private formGroup: FormGroup = new FormGroup({});
 
-  public actions: { save?: boolean; close?: boolean } = {};
+  public actions: { save?: boolean; close?: boolean; reset?: boolean } = {};
 
   // Event handling
   private onSaveSubject: Subject<void> = new Subject();
   private onCloseSubject: Subject<void> = new Subject();
+  private onResetSubject: Subject<void> = new Subject();
   private onChangeSubject: Subject<void> = new Subject();
 
   // Subscriptions
@@ -31,28 +32,69 @@ export class DynamicForm {
     this.initForm();
   }
 
+  /**
+   * Get observable for save event
+   * @returns Observable
+   */
   public onSave(): Observable<unknown> {
     return this.onSaveSubject.asObservable();
   }
 
+  /**
+   * Get observable for close event
+   * @returns Observable
+   */
   public onClose(): Observable<unknown> {
     return this.onCloseSubject.asObservable();
   }
 
+  /**
+   * Get observable for reset event
+   * @returns Observable
+   */
+  public onReset(): Observable<unknown> {
+    return this.onResetSubject.asObservable();
+  }
+
+  /**
+   * Get observable for change event
+   * @returns Observable
+   */
   public onChange(): Observable<unknown> {
     return this.onChangeSubject.asObservable();
   }
 
+  /**
+   * Trigger save event
+   */
   public save(): void {
     this.onSaveSubject.next();
   }
 
+  /**
+   * Trigger close event
+   */
   public close(): void {
     this.onCloseSubject.next();
   }
 
-  public reloadLabels(): void {}
+  /**
+   * Trigger reset event
+   */
+  public reset(): void {
+    this.onResetSubject.next();
+  }
 
+  /**
+   * Reload labels
+   */
+  public reloadLabels(): void {
+    // TODO: Implement dynamic reload for labels or accept observable as label
+  }
+
+  /**
+   * Reload form
+   */
   public reloadForm(
     _formGroup: FormGroup,
     _overrides: IDynamicOverride[]
@@ -69,18 +111,30 @@ export class DynamicForm {
     this.initForm();
   }
 
+  /**
+   * Clean form / reset
+   */
   public cleanForm(): void {
     this.formGroup.reset();
   }
 
+  /**
+   * Get FormGroup
+   */
   public get FormGroup(): FormGroup {
     return this.formGroup;
   }
 
+  /**
+   * Get Controls
+   */
   public get Controls(): IDynamicControl[] {
     return this.controls || [];
   }
 
+  /**
+   * Init form
+   */
   private initForm(): void {
     this.formChange = this.formGroup.valueChanges.pipe(
       tap(() => {
@@ -89,6 +143,9 @@ export class DynamicForm {
     );
   }
 
+  /**
+   * Map controls with overrides
+   */
   private mapControls(): void {
     const tempControls: IDynamicControl[] = [];
 

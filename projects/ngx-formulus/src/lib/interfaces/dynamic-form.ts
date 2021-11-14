@@ -9,5 +9,6 @@ export interface IDynamicForm {
   actions?: {
     save?: boolean;
     close?: boolean;
+    reset?: boolean;
   };
 }

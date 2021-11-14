@@ -18,6 +18,7 @@ import { TimepickerControlComponent } from './components/controls/timepicker-con
 import { SaveButtonComponent } from './components/form-elements/save-button/save-button.component';
 import { CloseButtonComponent } from './components/form-elements/close-button/close-button.component';
 import { FormControlDirective } from './directives/form-control/form-control.directive';
+import { ResetButtonComponent } from './components/form-elements/reset-button/reset-button.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FormControlDirective } from './directives/form-control/form-control.dir
     TimepickerControlComponent,
     SaveButtonComponent,
     CloseButtonComponent,
+    ResetButtonComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule, FormsModule],
   exports: [

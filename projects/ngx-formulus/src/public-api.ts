@@ -23,6 +23,7 @@ export { ToggleControlComponent } from './lib/components/controls/toggle-control
 
 export { SaveButtonComponent } from './lib/components/form-elements/save-button/save-button.component';
 export { CloseButtonComponent } from './lib/components/form-elements/close-button/close-button.component';
+export { ResetButtonComponent } from './lib/components/form-elements/reset-button/reset-button.component';
 
 // Directives
 export { DynamicControlDirective } from './lib/directives/dynamic-control/dynamic-control.directive';

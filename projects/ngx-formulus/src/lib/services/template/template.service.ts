@@ -11,6 +11,7 @@ import { TextControlComponent } from '../../components/controls/text-control/tex
 import { CheckboxControlComponent } from '../../components/controls/checkbox-control/checkbox-control.component';
 import { SaveButtonComponent } from '../../components/form-elements/save-button/save-button.component';
 import { CloseButtonComponent } from '../../components/form-elements/close-button/close-button.component';
+import { ResetButtonComponent } from '../../components/form-elements/reset-button/reset-button.component';
 
 @Injectable({
   providedIn: 'root',
@@ -73,6 +74,7 @@ export class TemplateService {
     // Form specific components
     this.templates[ControlType.SaveButton] = SaveButtonComponent as Component;
     this.templates[ControlType.CloseButton] = CloseButtonComponent as Component;
+    this.templates[ControlType.ResetButton] = ResetButtonComponent as Component;
   }
 
   /**

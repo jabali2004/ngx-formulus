@@ -8,6 +8,7 @@ export enum ControlType {
   // Form specific types
   SaveButton = 'save-button',
   CloseButton = 'close-button',
+  ResetButton = 'reset-button',
 }
 
 // TODO: Add datepicker and timepicker

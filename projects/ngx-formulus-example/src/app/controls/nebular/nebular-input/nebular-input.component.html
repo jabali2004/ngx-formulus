@@ -1,4 +1,5 @@
-<div class="nb-theme-default" *ngIf="dynamicControl && !dynamicControl.hidden">
+<div class="nb-theme-default pb-2" *ngIf="dynamicControl && !dynamicControl.hidden">
+  <span class="d-block mb-2" *ngIf="dynamicControl.label">{{ dynamicControl.label }}</span>
   <input nbInput [fullWidth]="dynamicControl.fullWidth" [id]="dynamicControl.formControlName" type="text"
     [placeholder]="dynamicControl.label" *ngIf="dynamicControl.formControl" [formControl]="dynamicControl.formControl"
     [attr.disabled]="dynamicControl.disabled ? '' :

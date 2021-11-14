@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
       {
         formControlName: 'firstName',
         label: 'First Name:',
-        fullWidth: true,
+        // fullWidth: true,
       },
       { formControlName: 'lastName', label: 'Last Name:' },
       {
@@ -58,6 +58,7 @@ export class AppComponent implements OnInit {
       actions: {
         save: true,
         close: true,
+        reset: true,
       },
     });
 
@@ -67,6 +68,10 @@ export class AppComponent implements OnInit {
 
     this.dynamicForm.onSave().subscribe(() => {
       console.log('Save clicked');
+    });
+
+    this.dynamicForm.onReset().subscribe(() => {
+      console.log('Reset clicked');
     });
   }
 }
