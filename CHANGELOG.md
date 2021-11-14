@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.7 (2021-11-14)
+
+
+### Bug Fixes
+
+* minor style issue ([8ff7211](https://github.com/jabali2004/ngx-formulus/commit/8ff72112be6862d4b34862d289abcf4c62e122bf))
+
 ### [0.0.6](https://github.com/jabali2004/ngx-formulus/compare/v0.0.5...v0.0.6) (2021-11-14)
 
 
