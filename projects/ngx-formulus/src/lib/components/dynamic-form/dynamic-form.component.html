@@ -4,8 +4,12 @@
 
     <div class="d-flex flex-row flex-wrap">
       <ng-container *ngFor="let dynamicControl of data.Controls">
-        <!-- FIXME: Fix broken fullwidth -->
-        <div class="d-flex mr-2 mb-2" *ngIf="dynamicControl && !dynamicControl.hidden">
+        <div class="d-flex mr-2 mb-2" *ngIf="dynamicControl && !dynamicControl.hidden && !dynamicControl.fullWidth">
+          <ng-container ngxDynamicControl [dynamicControl]="dynamicControl"></ng-container>
+        </div>
+        <!-- Full width control -->
+        <div class="d-inline-block w-100 mr-2 mb-2"
+          *ngIf="dynamicControl && !dynamicControl.hidden && dynamicControl.fullWidth">
           <ng-container ngxDynamicControl [dynamicControl]="dynamicControl"></ng-container>
         </div>
       </ng-container>
