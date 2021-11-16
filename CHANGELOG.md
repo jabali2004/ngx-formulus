@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.8 (2021-11-16)
+
+
+### Bug Fixes
+
+* full width condition ([a4f8c7a](https://github.com/jabali2004/ngx-formulus/commit/a4f8c7aa8c30e5a2d5ab190f31f1789901129d1e))
+
 ### 0.0.7 (2021-11-14)
 
 
