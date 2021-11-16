@@ -2,7 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### 0.0.8 (2021-11-16)
+### [0.0.8](https://github.com/jabali2004/ngx-formulus/compare/v0.0.7...v0.0.8) (2021-11-16)
+
+
+### Features
+
+* **form-service:** add basic formService ([5c31d9b](https://github.com/jabali2004/ngx-formulus/commit/5c31d9b2b06afea7342c361348e0add8fd452b0d))
 
 
 ### Bug Fixes
