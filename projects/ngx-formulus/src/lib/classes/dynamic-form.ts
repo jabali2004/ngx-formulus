@@ -4,21 +4,25 @@ import type { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { ControlType } from '../enums/control-type';
+import type { IActionOptions } from '../interfaces/action-options';
 import type { IDynamicControl } from '../interfaces/dynamic-control';
 import type { IDynamicForm } from '../interfaces/dynamic-form';
 import type { IDynamicOverride } from '../interfaces/dynamic-override';
+
 export class DynamicForm {
   private controls: IDynamicControl[] = [];
   private overrides: IDynamicOverride[] = [];
   private formGroup: FormGroup = new FormGroup({});
 
-  public actions: { save?: boolean; close?: boolean; reset?: boolean } = {};
+  private actions: IActionOptions = {};
 
   // Event handling
   private onSaveSubject: Subject<void> = new Subject();
   private onCloseSubject: Subject<void> = new Subject();
   private onResetSubject: Subject<void> = new Subject();
+
   private onChangeSubject: Subject<void> = new Subject();
+  private onReloadSubject: Subject<void> = new Subject();
 
   // Subscriptions
   private formChange: Observable<unknown> | undefined;
@@ -30,6 +34,27 @@ export class DynamicForm {
 
     this.mapControls();
     this.initForm();
+  }
+
+  /**
+   * Get FormGroup
+   */
+  public get FormGroup(): FormGroup {
+    return this.formGroup;
+  }
+
+  /**
+   * Get controls
+   */
+  public get Controls(): IDynamicControl[] {
+    return this.controls || [];
+  }
+
+  /**
+   * Get action options
+   */
+  public get Actions(): IActionOptions {
+    return this.actions;
   }
 
   /**
@@ -60,26 +85,35 @@ export class DynamicForm {
    * Get observable for change event
    * @returns Observable
    */
-  public onChange(): Observable<unknown> {
+  public get onChange(): Observable<unknown> {
     return this.onChangeSubject.asObservable();
   }
 
   /**
-   * Trigger save event
+   * Get observable for form reload event
+   * @returns Observable
+   */
+  public get onReload(): Observable<unknown> {
+    return this.onReloadSubject.asObservable();
+  }
+
+  /**
+   * Trigger dynamicForm save event
+   *
    */
   public save(): void {
     this.onSaveSubject.next();
   }
 
   /**
-   * Trigger close event
+   * Trigger dynamicForm close event
    */
   public close(): void {
     this.onCloseSubject.next();
   }
 
   /**
-   * Trigger reset event
+   * Trigger dynamicForm reset event
    */
   public reset(): void {
     this.onResetSubject.next();
@@ -109,6 +143,8 @@ export class DynamicForm {
 
     this.mapControls();
     this.initForm();
+
+    this.onReloadSubject.next();
   }
 
   /**
@@ -116,20 +152,6 @@ export class DynamicForm {
    */
   public cleanForm(): void {
     this.formGroup.reset();
-  }
-
-  /**
-   * Get FormGroup
-   */
-  public get FormGroup(): FormGroup {
-    return this.formGroup;
-  }
-
-  /**
-   * Get Controls
-   */
-  public get Controls(): IDynamicControl[] {
-    return this.controls || [];
   }
 
   /**

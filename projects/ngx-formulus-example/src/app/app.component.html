@@ -31,8 +31,13 @@
   <div class="col mt-2">
     <h2>Dynamic Form</h2>
 
-    <div class="mt-2" style="max-height: 10rem; max-width: 36rem;">
+    <div class="mt-2" style="max-width: 36rem;">
       <ngx-dynamic-form [data]="dynamicForm"></ngx-dynamic-form>
+    </div>
+
+    <div class="mt-4 p-3" style="background-color: lightgray;">
+      <button class="mr-2" (click)="addNewControl()">Add new control</button>
+      <button (click)="setUsername()">Set Username</button>
     </div>
   </div>
 </div>

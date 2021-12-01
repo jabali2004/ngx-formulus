@@ -22,7 +22,6 @@ export class NebularSaveButtonComponent implements OnInit {
   }
 
   public checkFormState(): boolean {
-    console.log(this.dynamicForm);
     if (this.dynamicForm && this.dynamicForm.FormGroup) {
       const touched = this.dynamicForm.FormGroup.touched;
       const valid = this.dynamicForm.FormGroup.valid;
