@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/jabali2004/ngx-formulus/compare/v0.0.8...v0.0.9) (2021-12-01)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/setup-node from 2.4.1 to 2.5.0 ([7783ba0](https://github.com/jabali2004/ngx-formulus/commit/7783ba0d813adab6892c272ccaa1c775956f311d))
+
+
+### Chores
+
+* **deps-dev:** bump @compodoc/compodoc from 1.1.15 to 1.1.16 ([e77d081](https://github.com/jabali2004/ngx-formulus/commit/e77d08116ad1a5e058612b986278fab4c7e21918))
+* **deps-dev:** bump @types/node from 16.11.10 to 16.11.11 ([cd4c9f2](https://github.com/jabali2004/ngx-formulus/commit/cd4c9f225d14ab2b00e6ace2cc18cde49e59f815))
+* **deps-dev:** bump @types/node from 16.11.7 to 16.11.8 ([99a02ba](https://github.com/jabali2004/ngx-formulus/commit/99a02ba148c2259c2de873e03ab8c67b7c76cc21))
+* **deps-dev:** bump @types/node from 16.11.8 to 16.11.10 ([8c6550f](https://github.com/jabali2004/ngx-formulus/commit/8c6550fa2c09a83bd56f34021e115b07e481ab00))
+* **deps-dev:** bump karma from 6.3.8 to 6.3.9 ([4d13940](https://github.com/jabali2004/ngx-formulus/commit/4d13940d82622f4d6d62016bb72f29294e6efbda))
+* **example:** add some usecases for dynamicForm functionality ([7b5c329](https://github.com/jabali2004/ngx-formulus/commit/7b5c3291f8363f6031d8e5bffea36720285afc91))
+* **release:** 0.0.9 ([ed44cea](https://github.com/jabali2004/ngx-formulus/commit/ed44cea849bda37e74a276bb96b0ad2bb55b4e8f))
+* **release:** 0.0.9 ([d4846fc](https://github.com/jabali2004/ngx-formulus/commit/d4846fcd689085328ca2fbe0883cb59472784629))
+
 ### [0.0.8](https://github.com/jabali2004/ngx-formulus/compare/v0.0.7...v0.0.8) (2021-11-16)
 
 
