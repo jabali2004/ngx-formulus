@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.9 (2021-12-01)
+
+
+### Chores
+
+* **example:** add some usecases for dynamicForm functionality ([7b5c329](https://github.com/jabali2004/ngx-formulus/commit/7b5c3291f8363f6031d8e5bffea36720285afc91))
+
 ### [0.0.8](https://github.com/jabali2004/ngx-formulus/compare/v0.0.7...v0.0.8) (2021-11-16)
 
 
