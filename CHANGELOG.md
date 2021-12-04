@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/jabali2004/ngx-formulus/compare/v0.0.9...v0.0.10) (2021-12-04)
+
+
+### Chores
+
+* **deps-dev:** bump karma-coverage from 2.0.3 to 2.1.0 ([458aee3](https://github.com/jabali2004/ngx-formulus/commit/458aee3496db6d5e4af141e029699a094050defe))
+* **deps:** update angular schematics ([bc89df3](https://github.com/jabali2004/ngx-formulus/commit/bc89df3b15e3a1a0eea1939078e4d0bd98dd2ccd))
+* **deps:** update to angular 13 ([fa7ae4f](https://github.com/jabali2004/ngx-formulus/commit/fa7ae4f6198c5489f7051306119832b8ffa71062))
+
 ### [0.0.9](https://github.com/jabali2004/ngx-formulus/compare/v0.0.8...v0.0.9) (2021-12-01)
 
 
