@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.1.0 (2021-12-04)
+
+
+### Chores
+
+* **deps:** update angular schematics ([bc89df3](https://github.com/jabali2004/ngx-formulus/commit/bc89df3b15e3a1a0eea1939078e4d0bd98dd2ccd))
+
 ### [0.0.9](https://github.com/jabali2004/ngx-formulus/compare/v0.0.8...v0.0.9) (2021-12-01)
 
 
