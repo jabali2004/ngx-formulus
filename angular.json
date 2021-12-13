@@ -107,8 +107,15 @@
                   "with": "projects/ngx-formulus-example/src/environments/environment.prod.ts"
                 }
               ],
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": false,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
               "outputHashing": "all",
-              "optimization": false,
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
