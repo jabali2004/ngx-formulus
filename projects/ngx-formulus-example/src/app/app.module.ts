@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Component } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,8 +17,9 @@ import type { NgxFormulusConfig } from 'projects/ngx-formulus/src/lib/interfaces
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { NebularInputComponent } from './controls/nebular/nebular-input/nebular-input.component';
 import { ControlsModule } from './controls/controls.module';
+
+import { NebularInputComponent } from './controls/nebular/nebular-input/nebular-input.component';
 import { NebularSaveButtonComponent } from './controls/nebular/nebular-save-button/nebular-save-button.component';
 
 const formulusConfig: NgxFormulusConfig = {
