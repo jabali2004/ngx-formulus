@@ -46,14 +46,13 @@ const formulusConfig: NgxFormulusConfig = {
 })
 export class AppModule {
   constructor(private templateService: TemplateService) {
-    this.templateService.setTemplate(
-      NebularInputComponent as Component,
-      ControlType.Input
-    );
-
-    this.templateService.setTemplate(
-      NebularSaveButtonComponent as Component,
-      ControlType.SaveButton
-    );
+    // this.templateService.setTemplate(
+    //   NebularInputComponent as Component,
+    //   ControlType.Input
+    // );
+    // this.templateService.setTemplate(
+    //   NebularSaveButtonComponent as Component,
+    //   ControlType.SaveButton
+    // );
   }
 }

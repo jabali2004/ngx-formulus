@@ -12,6 +12,9 @@ import { CheckboxControlComponent } from '../../components/controls/checkbox-con
 import { SaveButtonComponent } from '../../components/form-elements/save-button/save-button.component';
 import { CloseButtonComponent } from '../../components/form-elements/close-button/close-button.component';
 import { ResetButtonComponent } from '../../components/form-elements/reset-button/reset-button.component';
+import { ToggleControlComponent } from '../../components/controls/toggle-control/toggle-control.component';
+import { TimepickerControlComponent } from '../../components/controls/timepicker-control/timepicker-control.component';
+import { DatepickerControlComponent } from '../../components/controls/datepicker-control/datepicker-control.component';
 
 @Injectable({
   providedIn: 'root',
@@ -70,6 +73,14 @@ export class TemplateService {
     this.templates[ControlType.Select] = SelectControlComponent as Component;
     // Text
     this.templates[ControlType.Text] = TextControlComponent as Component;
+    // Toggle
+    this.templates[ControlType.Toggle] = ToggleControlComponent as Component;
+    // Time
+    this.templates[ControlType.Time] = TimepickerControlComponent as Component;
+    // Date
+    this.templates[ControlType.Date] = DatepickerControlComponent as Component;
+
+    // TODO: Vereinfachen da eine Input Komponente vieles abdecken kann. Von Password bis Timepicker...,
 
     // Form specific components
     this.templates[ControlType.SaveButton] = SaveButtonComponent as Component;

@@ -19,6 +19,12 @@ export class AppComponent implements OnInit {
     birthDate: new FormControl('', Validators.required),
     disabledControl: new FormControl(''),
     hiddenControl: new FormControl(''),
+    demoCheckbox: new FormControl(false),
+    demoRadio: new FormControl(false),
+    demoText: new FormControl(''),
+    demoToggle: new FormControl(false),
+    demoTime: new FormControl(''),
+    demoDate: new FormControl(''),
   });
 
   public dynamicForm: DynamicForm | null = null;
@@ -49,6 +55,48 @@ export class AppComponent implements OnInit {
       label: 'Control (Hidden)',
       type: ControlType.Input,
       hidden: true,
+      disabled: false,
+    },
+    {
+      formControlName: 'demoCheckbox',
+      label: 'Demo Checkbox:',
+      type: ControlType.Checkbox,
+      hidden: false,
+      disabled: false,
+    },
+    {
+      formControlName: 'demoToggle',
+      label: 'Demo Toggle:',
+      type: ControlType.Toggle,
+      hidden: false,
+      disabled: false,
+    },
+    {
+      formControlName: 'demoTime',
+      label: 'Demo Time:',
+      type: ControlType.Time,
+      hidden: false,
+      disabled: false,
+    },
+    {
+      formControlName: 'demoDate',
+      label: 'Demo Date:',
+      type: ControlType.Date,
+      hidden: false,
+      disabled: false,
+    },
+    {
+      formControlName: 'demoText',
+      label: 'Demo Text:',
+      type: ControlType.Text,
+      hidden: false,
+      disabled: false,
+    },
+    {
+      formControlName: 'demoRadio',
+      label: 'Demo Radio:',
+      type: ControlType.Radio,
+      hidden: false,
       disabled: false,
     },
   ];

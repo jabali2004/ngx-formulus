@@ -5,6 +5,10 @@ export enum ControlType {
   Select = 'select',
   Toggle = 'toggle',
   Text = 'text',
+  Time = 'time',
+  Date = 'date',
+  Textarea = 'textarea',
+  Password = 'password',
   // Form specific types
   SaveButton = 'save-button',
   CloseButton = 'close-button',
