@@ -20,7 +20,7 @@
     "lint": "ng lint",
     "doc": "compodoc -p tsconfig.doc.json -s",
     "build_example": "ng build ngx-formulus-example",
-    "build_lib": "ng build ngx-formulus --prod",
+    "build_lib": "ng build ngx-formulus",
     "update_version": "cd projects/ngx-formulus && npm version patch",
     "npm_pack": "cd dist/ngx-formulus && npm pack",
     "package": "npm run build_lib && npm run npm_pack",
