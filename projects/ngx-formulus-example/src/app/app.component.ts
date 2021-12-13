@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
     demoToggle: new FormControl(false),
     demoTime: new FormControl(''),
     demoDate: new FormControl(''),
+    demoPassword: new FormControl(''),
   });
 
   public dynamicForm: DynamicForm | null = null;
@@ -96,6 +97,13 @@ export class AppComponent implements OnInit {
       formControlName: 'demoRadio',
       label: 'Demo Radio:',
       type: ControlType.Radio,
+      hidden: false,
+      disabled: false,
+    },
+    {
+      formControlName: 'demoPassword',
+      label: 'Demo Password:',
+      type: ControlType.Password,
       hidden: false,
       disabled: false,
     },

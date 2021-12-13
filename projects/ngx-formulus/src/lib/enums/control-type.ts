@@ -1,14 +1,18 @@
 export enum ControlType {
+  // Input element
   Input = 'input',
   Checkbox = 'checkbox',
   Radio = 'radio',
-  Select = 'select',
-  Toggle = 'toggle',
   Text = 'text',
   Time = 'time',
   Date = 'date',
-  Textarea = 'textarea',
   Password = 'password',
+
+  // Other elements
+  Select = 'select',
+  Toggle = 'toggle',
+  Textarea = 'textarea',
+
   // Form specific types
   SaveButton = 'save-button',
   CloseButton = 'close-button',

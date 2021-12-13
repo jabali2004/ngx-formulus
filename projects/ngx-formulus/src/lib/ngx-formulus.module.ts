@@ -12,9 +12,6 @@ import { CheckboxControlComponent } from './components/controls/checkbox-control
 import { RadioControlComponent } from './components/controls/radio-control/radio-control.component';
 import { SelectControlComponent } from './components/controls/select-control/select-control.component';
 import { ToggleControlComponent } from './components/controls/toggle-control/toggle-control.component';
-import { TextControlComponent } from './components/controls/text-control/text-control.component';
-import { DatepickerControlComponent } from './components/controls/datepicker-control/datepicker-control.component';
-import { TimepickerControlComponent } from './components/controls/timepicker-control/timepicker-control.component';
 import { SaveButtonComponent } from './components/form-elements/save-button/save-button.component';
 import { CloseButtonComponent } from './components/form-elements/close-button/close-button.component';
 import { FormControlDirective } from './directives/form-control/form-control.directive';
@@ -31,9 +28,6 @@ import { ResetButtonComponent } from './components/form-elements/reset-button/re
     RadioControlComponent,
     SelectControlComponent,
     ToggleControlComponent,
-    TextControlComponent,
-    DatepickerControlComponent,
-    TimepickerControlComponent,
     SaveButtonComponent,
     CloseButtonComponent,
     ResetButtonComponent,
@@ -44,13 +38,9 @@ import { ResetButtonComponent } from './components/form-elements/reset-button/re
     BaseControlComponent,
     InputControlComponent,
     CheckboxControlComponent,
-    DatepickerControlComponent,
     RadioControlComponent,
     SelectControlComponent,
-    TextControlComponent,
-    TimepickerControlComponent,
     ToggleControlComponent,
-    TextControlComponent,
   ],
 })
 export class NgxFormulusModule {

@@ -1,8 +1,0 @@
-<div class="form-control h-auto" *ngIf="dynamicControl">
-  <label class="mr-2" [for]="dynamicControl.formControlName"
-    *ngIf="dynamicControl.label">{{ dynamicControl.label }}</label>
-  <input [ngClass]="{'fullWidth': dynamicControl.fullWidth}" [id]="dynamicControl.formControlName"
-    [type]="dynamicControl.type || 'text'" [formControl]="dynamicControl.formControl" *ngIf="dynamicControl.formControl"
-    [attr.disabled]="dynamicControl.disabled ? '' :
-    null">
-</div>

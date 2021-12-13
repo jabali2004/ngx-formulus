@@ -14,11 +14,8 @@ export { DynamicFormComponent } from './lib/components/dynamic-form/dynamic-form
 export { BaseControlComponent } from './lib/components/controls/base-control/base-control.component';
 export { InputControlComponent } from './lib/components/controls/input-control/input-control.component';
 export { CheckboxControlComponent } from './lib/components/controls/checkbox-control/checkbox-control.component';
-export { DatepickerControlComponent } from './lib/components/controls/datepicker-control/datepicker-control.component';
 export { RadioControlComponent } from './lib/components/controls/radio-control/radio-control.component';
 export { SelectControlComponent } from './lib/components/controls/select-control/select-control.component';
-export { TextControlComponent } from './lib/components/controls/text-control/text-control.component';
-export { TimepickerControlComponent } from './lib/components/controls/timepicker-control/timepicker-control.component';
 export { ToggleControlComponent } from './lib/components/controls/toggle-control/toggle-control.component';
 
 export { SaveButtonComponent } from './lib/components/form-elements/save-button/save-button.component';
