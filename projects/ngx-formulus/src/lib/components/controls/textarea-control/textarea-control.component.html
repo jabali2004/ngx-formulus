@@ -1,11 +1,8 @@
 <div class="form-control h-auto" *ngIf="dynamicControl">
   <label class="mr-2" [for]="dynamicControl.formControlName"
     *ngIf="dynamicControl.label">{{ dynamicControl.label }}</label>
-  <select [ngClass]="{'fullWidth': dynamicControl.fullWidth}" [id]="dynamicControl.formControlName"
+  <textarea [ngClass]="{'fullWidth': dynamicControl.fullWidth}" [id]="dynamicControl.formControlName"
     [formControl]="dynamicControl.formControl" *ngIf="dynamicControl.formControl" [attr.disabled]="dynamicControl.disabled ? '' :
     null">
-    <option *ngFor="let option of dynamicControl.data" [value]="option.value">
-      {{ option.label }}
-    </option>
-  </select>
+  </textarea>
 </div>

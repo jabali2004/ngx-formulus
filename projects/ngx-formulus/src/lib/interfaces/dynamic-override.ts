@@ -1,4 +1,5 @@
 import type { ControlType } from '../enums/control-type';
+import type { IDynamicData } from './dynamic-data';
 
 export interface IDynamicOverride {
   formControlName?: string;
@@ -7,4 +8,5 @@ export interface IDynamicOverride {
   fullWidth?: boolean;
   disabled?: boolean;
   hidden?: boolean;
+  data?: IDynamicData[];
 }

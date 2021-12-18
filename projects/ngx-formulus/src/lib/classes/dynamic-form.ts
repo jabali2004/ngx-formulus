@@ -98,32 +98,14 @@ export class DynamicForm {
   }
 
   /**
-   * Trigger dynamicForm save event
-   *
+   * Init form
    */
-  public save(): void {
-    this.onSaveSubject.next();
-  }
-
-  /**
-   * Trigger dynamicForm close event
-   */
-  public close(): void {
-    this.onCloseSubject.next();
-  }
-
-  /**
-   * Trigger dynamicForm reset event
-   */
-  public reset(): void {
-    this.onResetSubject.next();
-  }
-
-  /**
-   * Reload labels
-   */
-  public reloadLabels(): void {
-    // TODO: Implement dynamic reload for labels or accept observable as label
+  private initForm(): void {
+    this.formChange = this.formGroup.valueChanges.pipe(
+      tap(() => {
+        this.onChangeSubject.next();
+      })
+    );
   }
 
   /**
@@ -148,6 +130,28 @@ export class DynamicForm {
   }
 
   /**
+   * Trigger dynamicForm save event
+   *
+   */
+  public save(): void {
+    this.onSaveSubject.next();
+  }
+
+  /**
+   * Trigger dynamicForm close event
+   */
+  public close(): void {
+    this.onCloseSubject.next();
+  }
+
+  /**
+   * Trigger dynamicForm reset event
+   */
+  public reset(): void {
+    this.onResetSubject.next();
+  }
+
+  /**
    * Clean form / reset
    */
   public cleanForm(): void {
@@ -155,14 +159,30 @@ export class DynamicForm {
   }
 
   /**
-   * Init form
+   * Reload labels
    */
-  private initForm(): void {
-    this.formChange = this.formGroup.valueChanges.pipe(
-      tap(() => {
-        this.onChangeSubject.next();
-      })
-    );
+  public reloadLabels(): void {
+    // TODO: Implement dynamic reload for labels or accept observable as label
+  }
+
+  /**
+   * Collect all errors from form controls
+   * @returns string[]
+   */
+  public collectErrors(): string[] {
+    const errors: string[] = [];
+
+    this.controls.forEach((control) => {
+      if (control.formControl.errors) {
+        const error = Object.keys(control.formControl.errors).map((key) =>
+          key.toUpperCase()
+        );
+
+        errors.push(`${control.label} ${error.join(', ')}`);
+      }
+    });
+
+    return errors;
   }
 
   /**
@@ -182,6 +202,7 @@ export class DynamicForm {
         fullWidth: false,
         disabled: false,
         hidden: false,
+        data: [],
       };
 
       const controlOverride = this.overrides.find(
@@ -194,6 +215,7 @@ export class DynamicForm {
         newControl.fullWidth = controlOverride.fullWidth || false;
         newControl.disabled = controlOverride.disabled || false;
         newControl.hidden = controlOverride.hidden || false;
+        newControl.data = controlOverride.data || [];
       } else {
         newControl.label = formControlName;
         newControl.type = ControlType.Input;

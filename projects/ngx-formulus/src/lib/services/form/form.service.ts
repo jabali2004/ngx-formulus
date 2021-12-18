@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import type { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
-import type { DynamicForm } from '../classes/dynamic-form';
+import type { DynamicForm } from '../../classes/dynamic-form';
 
 @Injectable({
   providedIn: 'root',

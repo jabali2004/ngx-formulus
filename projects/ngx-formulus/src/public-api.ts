@@ -17,6 +17,7 @@ export { CheckboxControlComponent } from './lib/components/controls/checkbox-con
 export { RadioControlComponent } from './lib/components/controls/radio-control/radio-control.component';
 export { SelectControlComponent } from './lib/components/controls/select-control/select-control.component';
 export { ToggleControlComponent } from './lib/components/controls/toggle-control/toggle-control.component';
+export { TextareaControlComponent } from './lib/components/controls/textarea-control/textarea-control.component';
 
 export { SaveButtonComponent } from './lib/components/form-elements/save-button/save-button.component';
 export { CloseButtonComponent } from './lib/components/form-elements/close-button/close-button.component';

@@ -19,4 +19,6 @@ export enum ControlType {
   ResetButton = 'reset-button',
 }
 
-// TODO: Add datepicker and timepicker
+// TODO: Add radio group
+// TODO: Add slider
+// TODO: Add numeric

@@ -16,6 +16,7 @@ import { SaveButtonComponent } from './components/form-elements/save-button/save
 import { CloseButtonComponent } from './components/form-elements/close-button/close-button.component';
 import { FormControlDirective } from './directives/form-control/form-control.directive';
 import { ResetButtonComponent } from './components/form-elements/reset-button/reset-button.component';
+import { TextareaControlComponent } from './components/controls/textarea-control/textarea-control.component';
 
 @NgModule({
   declarations: [
@@ -31,17 +32,10 @@ import { ResetButtonComponent } from './components/form-elements/reset-button/re
     SaveButtonComponent,
     CloseButtonComponent,
     ResetButtonComponent,
+    TextareaControlComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule, FormsModule],
-  exports: [
-    DynamicFormComponent,
-    BaseControlComponent,
-    InputControlComponent,
-    CheckboxControlComponent,
-    RadioControlComponent,
-    SelectControlComponent,
-    ToggleControlComponent,
-  ],
+  exports: [DynamicFormComponent, BaseControlComponent],
 })
 export class NgxFormulusModule {
   static forRoot(

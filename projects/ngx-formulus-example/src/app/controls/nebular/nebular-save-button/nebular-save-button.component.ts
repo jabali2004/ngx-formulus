@@ -1,7 +1,7 @@
 import type { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { FormService } from 'projects/ngx-formulus/src/lib/services/form.service';
+import { FormService } from 'projects/ngx-formulus/src/lib/services/form/form.service';
 import type { DynamicForm } from 'projects/ngx-formulus/src/public-api';
 
 @Component({

@@ -5,23 +5,20 @@
     <h2>Normal Form</h2>
 
     <div class="mt-2">
-      <form class="form-group" [formGroup]="formGroup">
+      <form class="form-group">
         <div class="form-control">
           <label for="normal-firstName">First name:</label>
-          <input id="normal-firstName" formControlName="firstName">
-          <span style="color:red;" *ngIf="!formGroup.controls.firstName.valid">Firstname is required!</span>
+          <input id="normal-firstName">
         </div>
 
         <div class="form-control">
           <label for="normal-lastName">Last name:</label>
-          <input id="normal-lastName" formControlName="lastName">
-          <span style="color:red;" *ngIf="!formGroup.controls.lastName.valid">Last name is required!</span>
+          <input id="normal-lastName">
         </div>
 
         <div class="form-control">
           <label for="normal-birthDate">Birth date:</label>
-          <input type="date" id="normal-birthDate" formControlName="birthDate">
-          <span style="color:red;" *ngIf="!formGroup.controls.birthDate.valid">Birth date is required!</span>
+          <input type="date" id="normal-birthDate">
         </div>
       </form>
     </div>
@@ -31,13 +28,31 @@
   <div class="col mt-2">
     <h2>Dynamic Form</h2>
 
-    <div class="mt-2" style="max-width: 36rem;">
-      <ngx-dynamic-form [data]="dynamicForm"></ngx-dynamic-form>
-    </div>
+    <div class="row">
+      <div class="col-6 mt-2">
+        <ngx-dynamic-form [data]="dynamicForm"></ngx-dynamic-form>
+      </div>
 
-    <div class="mt-4 p-3" style="background-color: lightgray;">
-      <button class="mr-2" (click)="addNewControl()">Add new control</button>
-      <button (click)="setUsername()">Set Username</button>
+      <div class="col-6 mt-2">
+        <!-- Debug -->
+        <pre class="debugBox" *ngIf="!dynamicForm?.FormGroup?.valid">
+          <h2>Error Messages:</h2>
+          <code>{{ dynamicForm?.collectErrors() | json }}</code>
+        </pre>
+
+        <!-- Display formGroup Values -->
+        <pre class="valueBox">
+          <h2>FormGroup Values:</h2>
+          <code>{{ dynamicForm?.FormGroup?.value | json }}</code>
+        </pre>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-6 mt-4 p-3">
+        <button class="mr-2" (click)="addNewControl()">Add new control</button>
+        <button (click)="setUsername()">Set Username</button>
+      </div>
     </div>
   </div>
 </div>

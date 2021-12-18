@@ -14,18 +14,23 @@ export class AppComponent implements OnInit {
   public title = 'ngx-formulus-example';
 
   public formGroup: FormGroup = new FormGroup({
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
-    birthDate: new FormControl('', Validators.required),
-    disabledControl: new FormControl(''),
-    hiddenControl: new FormControl(''),
+    demoInput: new FormControl(''),
     demoCheckbox: new FormControl(false),
     demoRadio: new FormControl(false),
     demoText: new FormControl(''),
-    demoToggle: new FormControl(false),
     demoTime: new FormControl(''),
     demoDate: new FormControl(''),
     demoPassword: new FormControl(''),
+    demoSelect: new FormControl(null),
+    demoTextarea: new FormControl(''),
+    demoHiddenPassword: new FormControl(''),
+    demoDisabledInput: new FormControl('Disabled Input!'),
+    demoDisabledCheckbox: new FormControl(true),
+    demoRequiredInput: new FormControl(null, Validators.required),
+    demoRequiredEmailInput: new FormControl(null, [
+      Validators.required,
+      Validators.email,
+    ]),
   });
 
   public dynamicForm: DynamicForm | null = null;
@@ -34,78 +39,130 @@ export class AppComponent implements OnInit {
 
   private overrides: IDynamicOverride[] = [
     {
-      formControlName: 'firstName',
-      label: 'First Name:',
-      fullWidth: true,
-    },
-    { formControlName: 'lastName', label: 'Last Name:' },
-    {
-      formControlName: 'birthDate',
-      label: 'Birth Date:',
-      type: ControlType.Input,
-    },
-    {
-      formControlName: 'disabledControl',
-      label: 'Control (Disabled)',
+      formControlName: 'demoInput',
+      label: 'Demo Input',
       type: ControlType.Input,
       hidden: false,
-      disabled: true,
-    },
-    {
-      formControlName: 'hiddenControl',
-      label: 'Control (Hidden)',
-      type: ControlType.Input,
-      hidden: true,
       disabled: false,
+      fullWidth: true,
     },
     {
       formControlName: 'demoCheckbox',
-      label: 'Demo Checkbox:',
+      label: 'Demo Checkbox',
       type: ControlType.Checkbox,
       hidden: false,
       disabled: false,
-    },
-    {
-      formControlName: 'demoToggle',
-      label: 'Demo Toggle:',
-      type: ControlType.Toggle,
-      hidden: false,
-      disabled: false,
-    },
-    {
-      formControlName: 'demoTime',
-      label: 'Demo Time:',
-      type: ControlType.Time,
-      hidden: false,
-      disabled: false,
-    },
-    {
-      formControlName: 'demoDate',
-      label: 'Demo Date:',
-      type: ControlType.Date,
-      hidden: false,
-      disabled: false,
-    },
-    {
-      formControlName: 'demoText',
-      label: 'Demo Text:',
-      type: ControlType.Text,
-      hidden: false,
-      disabled: false,
+      fullWidth: true,
     },
     {
       formControlName: 'demoRadio',
-      label: 'Demo Radio:',
+      label: 'Demo Radio',
       type: ControlType.Radio,
       hidden: false,
       disabled: false,
+      fullWidth: true,
+    },
+    {
+      formControlName: 'demoText',
+      label: 'Demo Text',
+      type: ControlType.Text,
+      hidden: false,
+      disabled: false,
+      fullWidth: true,
+    },
+    {
+      formControlName: 'demoTime',
+      label: 'Demo Time',
+      type: ControlType.Time,
+      hidden: false,
+      disabled: false,
+      fullWidth: true,
+    },
+    {
+      formControlName: 'demoDate',
+      label: 'Demo Date',
+      type: ControlType.Date,
+      hidden: false,
+      disabled: false,
+      fullWidth: true,
     },
     {
       formControlName: 'demoPassword',
-      label: 'Demo Password:',
+      label: 'Demo Password',
       type: ControlType.Password,
       hidden: false,
       disabled: false,
+      fullWidth: true,
+    },
+    {
+      formControlName: 'demoSelect',
+      label: 'Demo Select',
+      type: ControlType.Select,
+      hidden: false,
+      disabled: false,
+      fullWidth: true,
+      data: [
+        {
+          value: 'option1',
+          label: 'Option 1',
+        },
+        {
+          value: 'option2',
+          label: 'Option 2',
+        },
+        {
+          value: 'option3',
+          label: 'Option 3',
+        },
+      ],
+    },
+    {
+      formControlName: 'demoTextarea',
+      label: 'Demo Textarea',
+      type: ControlType.Textarea,
+      hidden: false,
+      disabled: false,
+      fullWidth: true,
+    },
+    {
+      formControlName: 'demoHiddenPassword',
+      label: 'Demo Hidden Password',
+      type: ControlType.Password,
+      hidden: true,
+      disabled: false,
+      fullWidth: true,
+    },
+    {
+      formControlName: 'demoDisabledInput',
+      label: 'Demo Disabled Input',
+      type: ControlType.Input,
+      hidden: false,
+      disabled: true,
+      fullWidth: true,
+    },
+    {
+      formControlName: 'demoDisabledCheckbox',
+      label: 'Demo Disabled Checkbox',
+      type: ControlType.Checkbox,
+      hidden: false,
+      disabled: true,
+      fullWidth: true,
+    },
+    {
+      formControlName: 'demoRequiredInput',
+      label: 'Demo Required Input',
+      type: ControlType.Input,
+      hidden: false,
+      disabled: false,
+      fullWidth: true,
+    },
+    {
+      formControlName: 'demoRequiredEmailInput',
+      label: 'Demo Required Email Input',
+      type: ControlType.Input,
+      hidden: false,
+      disabled: false,
+      fullWidth: true,
     },
   ];
 
@@ -162,7 +219,7 @@ export class AppComponent implements OnInit {
 
   public setUsername(): void {
     this.dynamicForm?.cleanForm();
-    this.formGroup.controls.firstName.setValue('Jabali2004');
+    this.formGroup.controls.demoInput.setValue('Jabali2004');
     this.dynamicForm?.reloadForm(this.formGroup, this.overrides);
   }
 }

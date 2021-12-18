@@ -4,7 +4,7 @@ import { FormGroup } from '@angular/forms';
 import type { IDynamicControl } from '../../interfaces/dynamic-control';
 import type { DynamicForm } from '../../classes/dynamic-form';
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { FormService } from '../../services/form.service';
+import { FormService } from '../../services/form/form.service';
 import type { IActionOptions } from '../../interfaces/action-options';
 
 @Component({

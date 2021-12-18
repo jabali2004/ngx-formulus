@@ -3,6 +3,6 @@
     *ngIf="dynamicControl.label">{{ dynamicControl.label }}</label>
   <input [ngClass]="{'fullWidth': dynamicControl.fullWidth}" [id]="dynamicControl.formControlName"
     [type]="dynamicControl.type || 'checkbox'" [formControl]="dynamicControl.formControl"
-    *ngIf="dynamicControl.formControl" [attr.disabled]="dynamicControl.disabled ? '' :
+    *ngIf="dynamicControl.formControl" [checked]="dynamicControl.formControl.value" [attr.disabled]="dynamicControl.disabled ? '' :
     null">
 </div>

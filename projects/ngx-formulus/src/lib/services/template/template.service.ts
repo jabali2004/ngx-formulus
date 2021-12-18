@@ -12,6 +12,7 @@ import { SaveButtonComponent } from '../../components/form-elements/save-button/
 import { CloseButtonComponent } from '../../components/form-elements/close-button/close-button.component';
 import { ResetButtonComponent } from '../../components/form-elements/reset-button/reset-button.component';
 import { ToggleControlComponent } from '../../components/controls/toggle-control/toggle-control.component';
+import { TextareaControlComponent } from '../../components/controls/textarea-control/textarea-control.component';
 
 @Injectable({
   providedIn: 'root',
@@ -78,8 +79,10 @@ export class TemplateService {
     this.templates[ControlType.Date] = InputControlComponent as Component;
     // Toggle
     this.templates[ControlType.Toggle] = ToggleControlComponent as Component;
-
-    // TODO: Add textarea , radio group
+    // Textarea
+    this.templates[ControlType.Textarea] =
+      TextareaControlComponent as Component;
+    // TODO: Add radio group
 
     // Form specific components
     this.templates[ControlType.SaveButton] = SaveButtonComponent as Component;
