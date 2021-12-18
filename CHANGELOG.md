@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.2 (2021-12-18)
+
+
+### Features
+
+* **controls:** add textarea and select control ([354295e](https://github.com/jabali2004/ngx-formulus/commit/354295e4251f99f7779aa3cfd373b70ca83f17d5))
+
 ### [0.1.1](https://github.com/jabali2004/ngx-formulus/compare/v0.1.0...v0.1.1) (2021-12-13)
 
 
