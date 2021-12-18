@@ -2,12 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### 0.1.2 (2021-12-18)
+### [0.1.2](https://github.com/jabali2004/ngx-formulus/compare/v0.1.1...v0.1.2) (2021-12-18)
 
 
 ### Features
 
 * **controls:** add textarea and select control ([354295e](https://github.com/jabali2004/ngx-formulus/commit/354295e4251f99f7779aa3cfd373b70ca83f17d5))
+
+
+### Bug Fixes
+
+* **deps:** bump @ng-bootstrap/ng-bootstrap from 11.0.0-rc.0 to 11.0.0 ([6c17cc2](https://github.com/jabali2004/ngx-formulus/commit/6c17cc287da55e393a4a125b139b543acfff6e05))
+
+
+### Chores
+
+* **deps-dev:** bump @types/node from 16.11.12 to 16.11.13 ([8f914d1](https://github.com/jabali2004/ngx-formulus/commit/8f914d15ecc6eada05eb368976f3c27060fb73a1))
+* **deps-dev:** bump @types/node from 16.11.13 to 17.0.0 ([cc14824](https://github.com/jabali2004/ngx-formulus/commit/cc14824f95377696ca1dfbf08bda040ff2d81ab3))
+* **deps-dev:** bump @typescript-eslint/parser from 5.6.0 to 5.7.0 ([28e1336](https://github.com/jabali2004/ngx-formulus/commit/28e13364a60686964eff70582d1f97fe67e4743b))
+* **deps-dev:** bump eslint from 8.4.0 to 8.4.1 ([9ef90fd](https://github.com/jabali2004/ngx-formulus/commit/9ef90fd609018406f345d720959b0dc4931265ea))
+* **deps-dev:** bump typescript from 4.4.4 to 4.5.4 ([0d8b6c1](https://github.com/jabali2004/ngx-formulus/commit/0d8b6c131450b01f69d0babed0941a47dde393c9))
+* remove duplicate components ([a44fe78](https://github.com/jabali2004/ngx-formulus/commit/a44fe78e6f0058ee03481b5e4470ca48c5d571f7))
 
 ### [0.1.1](https://github.com/jabali2004/ngx-formulus/compare/v0.1.0...v0.1.1) (2021-12-13)
 
