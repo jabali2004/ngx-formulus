@@ -12,4 +12,11 @@ export class CheckboxControlComponent extends BaseControlComponent {
   }
 
   ngOnInit(): void {}
+
+  public onChange($event: Event): void {
+    if ($event) {
+      const target = $event.target as HTMLInputElement;
+      this.dynamicControl.formControl.setValue(target.checked);
+    }
+  }
 }
