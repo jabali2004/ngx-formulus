@@ -156,14 +156,14 @@ export class AppComponent implements OnInit {
       disabled: false,
       fullWidth: true,
     },
-    {
-      formControlName: 'demoRequiredEmailInput',
-      label: 'Demo Required Email Input',
-      type: ControlType.Input,
-      hidden: false,
-      disabled: false,
-      fullWidth: true,
-    },
+    // {
+    //   formControlName: 'demoRequiredEmailInput',
+    //   label: 'Demo Required Email Input',
+    //   type: ControlType.Input,
+    //   hidden: false,
+    //   disabled: false,
+    //   fullWidth: true,
+    // },
   ];
 
   ngOnInit(): void {
@@ -176,6 +176,9 @@ export class AppComponent implements OnInit {
         save: true,
         close: true,
         reset: true,
+      },
+      config: {
+        overridesOnly: true,
       },
     });
 

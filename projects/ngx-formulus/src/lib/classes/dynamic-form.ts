@@ -5,6 +5,7 @@ import { Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { ControlType } from '../enums/control-type';
 import type { IActionOptions } from '../interfaces/action-options';
+import { IDynamicConfig } from '../interfaces/dynamic-config';
 import type { IDynamicControl } from '../interfaces/dynamic-control';
 import type { IDynamicForm } from '../interfaces/dynamic-form';
 import type { IDynamicOverride } from '../interfaces/dynamic-override';
@@ -13,6 +14,8 @@ export class DynamicForm {
   private controls: IDynamicControl[] = [];
   private overrides: IDynamicOverride[] = [];
   private formGroup: FormGroup = new FormGroup({});
+
+  private config: IDynamicConfig = {};
 
   private actions: IActionOptions = {};
 
@@ -31,6 +34,10 @@ export class DynamicForm {
     this.formGroup = config.formGroup || new FormGroup({});
     this.overrides = config.overrides || [];
     this.actions = config.actions || {};
+
+    this.config = {
+      overridesOnly: config.config?.overridesOnly || false,
+    };
 
     this.mapControls();
     this.initForm();
@@ -208,6 +215,12 @@ export class DynamicForm {
       const controlOverride = this.overrides.find(
         (x) => x.formControlName === formControlName
       );
+
+      // Overrides only
+      if (this.config.overridesOnly && !controlOverride) {
+        console.log('Hello There');
+        continue;
+      }
 
       if (controlOverride) {
         newControl.label = controlOverride.label || formControlName;

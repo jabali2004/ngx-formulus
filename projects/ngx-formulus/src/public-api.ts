@@ -28,9 +28,11 @@ export { DynamicControlDirective } from './lib/directives/dynamic-control/dynami
 export { FormControlDirective } from './lib/directives/form-control/form-control.directive';
 
 // Interfaces
+export { NgxFormulusConfig } from './lib/interfaces/ngx-formulus-config';
 export { IDynamicControl } from './lib/interfaces/dynamic-control';
 export { IDynamicOverride } from './lib/interfaces/dynamic-override';
 export { IDynamicForm } from './lib/interfaces/dynamic-form';
+export { IDynamicConfig } from './lib/interfaces/dynamic-config';
 
 // Classes
 export { DynamicForm } from './lib/classes/dynamic-form';
