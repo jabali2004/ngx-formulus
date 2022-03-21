@@ -5,7 +5,7 @@ import { Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { ControlType } from '../enums/control-type';
 import type { IActionOptions } from '../interfaces/action-options';
-import { IDynamicConfig } from '../interfaces/dynamic-config';
+import type { IDynamicConfig } from '../interfaces/dynamic-config';
 import type { IDynamicControl } from '../interfaces/dynamic-control';
 import type { IDynamicForm } from '../interfaces/dynamic-form';
 import type { IDynamicOverride } from '../interfaces/dynamic-override';
