@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.4 (2022-03-26)
+
+
+### Chores
+
+* disable formControl if disable override flag is true ([d4bb89a](https://github.com/jabali2004/ngx-formulus/commit/d4bb89a3f4e2bcb8f6bba19c24955650fa1a596f))
+
 ### [0.1.3](https://github.com/jabali2004/ngx-formulus/compare/v0.1.2...v0.1.3) (2022-03-21)
 
 
