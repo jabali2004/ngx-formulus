@@ -2,11 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### 0.1.4 (2022-03-26)
+### [0.1.4](https://github.com/jabali2004/ngx-formulus/compare/v0.1.3...v0.1.4) (2022-03-26)
+
+
+### Bug Fixes
+
+* **deps:** bump minimist from 1.2.5 to 1.2.6 ([881d2af](https://github.com/jabali2004/ngx-formulus/commit/881d2af9f1f0ecabd5814d28c9f3b3933e2dfbe5))
 
 
 ### Chores
 
+* **deps-dev:** bump @angular-eslint/builder from 13.0.1 to 13.1.0 ([33fca29](https://github.com/jabali2004/ngx-formulus/commit/33fca29953366454619985134561d99847a1138c))
+* **deps-dev:** bump @angular-eslint/eslint-plugin ([f720aae](https://github.com/jabali2004/ngx-formulus/commit/f720aae54f10952d8e76b573468487a0634ab4ec))
+* **deps-dev:** bump @angular-eslint/eslint-plugin-template ([5f44290](https://github.com/jabali2004/ngx-formulus/commit/5f44290be9ef804c795735d4d43376337f4e2a2a))
+* **deps-dev:** bump @angular-eslint/schematics from 13.0.1 to 13.1.0 ([d48167d](https://github.com/jabali2004/ngx-formulus/commit/d48167dee004738cbb172a0db67085a452b0556d))
+* **deps-dev:** bump @angular-eslint/template-parser ([0677838](https://github.com/jabali2004/ngx-formulus/commit/067783883f8ae011cf55dad34255afbfb34ba6d6))
+* **deps-dev:** bump @types/jasmine from 3.10.3 to 4.0.0 ([b44511e](https://github.com/jabali2004/ngx-formulus/commit/b44511e43f52fc0569245be6c7a32e21d108a585))
+* **deps-dev:** bump @types/node from 17.0.21 to 17.0.22 ([e185b61](https://github.com/jabali2004/ngx-formulus/commit/e185b61166e6522798c781626ac9569e809adeeb))
+* **deps-dev:** bump @types/node from 17.0.22 to 17.0.23 ([7516956](https://github.com/jabali2004/ngx-formulus/commit/7516956bce03741be0aabe77ba6a8500a11421b5))
+* **deps-dev:** bump @typescript-eslint/eslint-plugin ([8cddf6c](https://github.com/jabali2004/ngx-formulus/commit/8cddf6cb36e7eb6e1e4e76feff61bf7155133e29))
+* **deps-dev:** bump typescript from 4.5.5 to 4.6.2 ([d3fc1b4](https://github.com/jabali2004/ngx-formulus/commit/d3fc1b48de38be806788c330a7fbc83a0bd6b709))
+* **deps-dev:** bump typescript from 4.6.2 to 4.6.3 ([fabc2f1](https://github.com/jabali2004/ngx-formulus/commit/fabc2f18e50c5ce929f0681f2cf2ecf6e49e862e))
 * disable formControl if disable override flag is true ([d4bb89a](https://github.com/jabali2004/ngx-formulus/commit/d4bb89a3f4e2bcb8f6bba19c24955650fa1a596f))
 
 ### [0.1.3](https://github.com/jabali2004/ngx-formulus/compare/v0.1.2...v0.1.3) (2022-03-21)
