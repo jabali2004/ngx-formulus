@@ -218,7 +218,6 @@ export class DynamicForm {
 
       // Overrides only
       if (this.config.overridesOnly && !controlOverride) {
-        console.log('Hello There');
         continue;
       }
 
@@ -229,6 +228,10 @@ export class DynamicForm {
         newControl.disabled = controlOverride.disabled || false;
         newControl.hidden = controlOverride.hidden || false;
         newControl.data = controlOverride.data || [];
+
+        if (controlOverride.disabled) {
+          newControl.formControl.disable();
+        }
       } else {
         newControl.label = formControlName;
         newControl.type = ControlType.Input;
