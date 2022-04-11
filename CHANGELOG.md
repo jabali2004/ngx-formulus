@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/jabali2004/ngx-formulus/compare/v0.1.4...v0.1.5) (2022-04-11)
+
+
+### Bug Fixes
+
+* build ([ea979f2](https://github.com/jabali2004/ngx-formulus/commit/ea979f2b7b787268cc3cefeadba5d03b7bd56b8f))
+
+
+### Chores
+
+* add numeric input ControlType ([47d344f](https://github.com/jabali2004/ngx-formulus/commit/47d344f48f6b8f744ed69e1b3dc40de67e58e05b))
+* **deps-dev:** bump @angular-devkit/build-angular ([6aacc0a](https://github.com/jabali2004/ngx-formulus/commit/6aacc0af387c03b9af841ab77eb15258d6c9a210))
+* **deps-dev:** bump @angular/cli from 13.3.0 to 13.3.1 ([6deb817](https://github.com/jabali2004/ngx-formulus/commit/6deb81723df373e87831f763f6f43b2d4fc376ce))
+* **deps-dev:** bump @schematics/angular from 13.1.3 to 13.3.1 ([dffd03d](https://github.com/jabali2004/ngx-formulus/commit/dffd03ddce55b95eb624d145b23225bc7aae70eb))
+* **deps-dev:** bump @types/jasmine from 4.0.0 to 4.0.1 ([97a7cdc](https://github.com/jabali2004/ngx-formulus/commit/97a7cdc66d304fa1ac408492eee153ac96f78dc7))
+* **deps-dev:** bump @types/jasmine from 4.0.1 to 4.0.2 ([eb6e8af](https://github.com/jabali2004/ngx-formulus/commit/eb6e8af0b420023c3c84e6652488fe235e6fd212))
+* **deps-dev:** bump @typescript-eslint/eslint-plugin ([f2d682c](https://github.com/jabali2004/ngx-formulus/commit/f2d682c29e1b960c68c9a3cbc1b91cadb7354d16))
+* **deps-dev:** bump @typescript-eslint/parser from 5.16.0 to 5.17.0 ([0bb686f](https://github.com/jabali2004/ngx-formulus/commit/0bb686f994f5b8af7e9be8e9e1be53400dc36f1b))
+* **deps-dev:** bump eslint from 8.11.0 to 8.12.0 ([e7d7bb1](https://github.com/jabali2004/ngx-formulus/commit/e7d7bb15f766acba1e7552bbdb0acf236581b761))
+* **deps-dev:** bump karma-jasmine from 4.0.1 to 4.0.2 ([6b6e7aa](https://github.com/jabali2004/ngx-formulus/commit/6b6e7aade76a43f973440a13dec9487164dd1a20))
+
 ### [0.1.4](https://github.com/jabali2004/ngx-formulus/compare/v0.1.3...v0.1.4) (2022-03-26)
 
 
