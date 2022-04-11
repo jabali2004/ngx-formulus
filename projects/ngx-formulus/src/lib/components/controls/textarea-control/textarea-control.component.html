@@ -1,8 +1,16 @@
 <div class="form-control h-auto" *ngIf="dynamicControl">
-  <label class="mr-2" [for]="dynamicControl.formControlName"
-    *ngIf="dynamicControl.label">{{ dynamicControl.label }}</label>
-  <textarea [ngClass]="{'fullWidth': dynamicControl.fullWidth}" [id]="dynamicControl.formControlName"
-    [formControl]="dynamicControl.formControl" *ngIf="dynamicControl.formControl" [attr.disabled]="dynamicControl.disabled ? '' :
-    null">
+  <label
+    class="mr-2"
+    [for]="dynamicControl.formControlName"
+    *ngIf="dynamicControl.label"
+    >{{ dynamicControl.label }}</label
+  >
+  <textarea
+    [ngClass]="{ fullWidth: dynamicControl.fullWidth }"
+    [id]="dynamicControl.formControlName"
+    [formControl]="dynamicControl.formControl"
+    *ngIf="dynamicControl.formControl"
+    [attr.disabled]="dynamicControl.disabled ? '' : null"
+  >
   </textarea>
 </div>
