@@ -7,6 +7,7 @@ export enum ControlType {
   Time = 'time',
   Date = 'date',
   Password = 'password',
+  Number = 'number',
 
   // Other elements
   Select = 'select',

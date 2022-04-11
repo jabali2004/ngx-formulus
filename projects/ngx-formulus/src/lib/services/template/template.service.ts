@@ -79,6 +79,8 @@ export class TemplateService {
     this.templates[ControlType.Date] = InputControlComponent as Component;
     // Toggle
     this.templates[ControlType.Toggle] = ToggleControlComponent as Component;
+    // Number
+    this.templates[ControlType.Number] = InputControlComponent as Component;
     // Textarea
     this.templates[ControlType.Textarea] =
       TextareaControlComponent as Component;

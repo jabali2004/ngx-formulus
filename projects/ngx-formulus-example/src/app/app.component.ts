@@ -31,6 +31,10 @@ export class AppComponent implements OnInit {
       Validators.required,
       Validators.email,
     ]),
+    demoNumberInput: new FormControl(null, [
+      Validators.minLength(1),
+      Validators.maxLength(5),
+    ]),
   });
 
   public dynamicForm: DynamicForm | null = null;
@@ -156,14 +160,22 @@ export class AppComponent implements OnInit {
       disabled: false,
       fullWidth: true,
     },
-    // {
-    //   formControlName: 'demoRequiredEmailInput',
-    //   label: 'Demo Required Email Input',
-    //   type: ControlType.Input,
-    //   hidden: false,
-    //   disabled: false,
-    //   fullWidth: true,
-    // },
+    {
+      formControlName: 'demoRequiredEmailInput',
+      label: 'Demo Required Email Input',
+      type: ControlType.Input,
+      hidden: false,
+      disabled: false,
+      fullWidth: true,
+    },
+    {
+      formControlName: 'demoNumberInput',
+      label: 'Demo Number Input',
+      type: ControlType.Number,
+      hidden: false,
+      disabled: false,
+      fullWidth: true,
+    },
   ];
 
   ngOnInit(): void {
