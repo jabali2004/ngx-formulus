@@ -1,6 +1,6 @@
 import type { OnInit } from '@angular/core';
 import { Input, Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import type { IDynamicControl } from '../../../interfaces/dynamic-control';
 
 @Component({
@@ -9,7 +9,7 @@ import type { IDynamicControl } from '../../../interfaces/dynamic-control';
 })
 export class BaseControlComponent implements OnInit {
   @Input() dynamicControl: IDynamicControl = {
-    formControl: new FormControl(),
+    formControl: new UntypedFormControl(),
     formControlName: '',
     fullWidth: false,
     hidden: false,

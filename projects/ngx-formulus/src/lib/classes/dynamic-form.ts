@@ -1,5 +1,5 @@
-import type { FormControl } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
+import type { UntypedFormControl } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import type { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -13,7 +13,7 @@ import type { IDynamicOverride } from '../interfaces/dynamic-override';
 export class DynamicForm {
   private controls: IDynamicControl[] = [];
   private overrides: IDynamicOverride[] = [];
-  private formGroup: FormGroup = new FormGroup({});
+  private formGroup: UntypedFormGroup = new UntypedFormGroup({});
 
   private config: IDynamicConfig = {};
 
@@ -31,7 +31,7 @@ export class DynamicForm {
   private formChange: Observable<unknown> | undefined;
 
   constructor(config: IDynamicForm) {
-    this.formGroup = config.formGroup || new FormGroup({});
+    this.formGroup = config.formGroup || new UntypedFormGroup({});
     this.overrides = config.overrides || [];
     this.actions = config.actions || {};
 
@@ -46,7 +46,7 @@ export class DynamicForm {
   /**
    * Get FormGroup
    */
-  public get FormGroup(): FormGroup {
+  public get FormGroup(): UntypedFormGroup {
     return this.formGroup;
   }
 
@@ -119,7 +119,7 @@ export class DynamicForm {
    * Reload form
    */
   public reloadForm(
-    _formGroup: FormGroup,
+    _formGroup: UntypedFormGroup,
     _overrides: IDynamicOverride[]
   ): void {
     if (_formGroup) {
@@ -201,7 +201,7 @@ export class DynamicForm {
     const formControls = this.formGroup.controls;
 
     for (const formControlName in formControls) {
-      const formControl = formControls[formControlName] as FormControl;
+      const formControl = formControls[formControlName] as UntypedFormControl;
 
       const newControl: IDynamicControl = {
         formControl,

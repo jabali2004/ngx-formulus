@@ -1,6 +1,10 @@
 import type { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  UntypedFormControl,
+  UntypedFormGroup,
+  Validators,
+} from '@angular/forms';
 import type { IDynamicOverride } from 'projects/ngx-formulus/src/public-api';
 import { ControlType } from 'projects/ngx-formulus/src/public-api';
 import { DynamicForm } from 'projects/ngx-formulus/src/public-api';
@@ -13,25 +17,25 @@ import { DynamicForm } from 'projects/ngx-formulus/src/public-api';
 export class AppComponent implements OnInit {
   public title = 'ngx-formulus-example';
 
-  public formGroup: FormGroup = new FormGroup({
-    demoInput: new FormControl(''),
-    demoCheckbox: new FormControl(false),
-    demoRadio: new FormControl(false),
-    demoText: new FormControl(''),
-    demoTime: new FormControl(''),
-    demoDate: new FormControl(''),
-    demoPassword: new FormControl(''),
-    demoSelect: new FormControl(null),
-    demoTextarea: new FormControl(''),
-    demoHiddenPassword: new FormControl(''),
-    demoDisabledInput: new FormControl('Disabled Input!'),
-    demoDisabledCheckbox: new FormControl(true),
-    demoRequiredInput: new FormControl(null, Validators.required),
-    demoRequiredEmailInput: new FormControl(null, [
+  public formGroup: UntypedFormGroup = new UntypedFormGroup({
+    demoInput: new UntypedFormControl(''),
+    demoCheckbox: new UntypedFormControl(false),
+    demoRadio: new UntypedFormControl(false),
+    demoText: new UntypedFormControl(''),
+    demoTime: new UntypedFormControl(''),
+    demoDate: new UntypedFormControl(''),
+    demoPassword: new UntypedFormControl(''),
+    demoSelect: new UntypedFormControl(null),
+    demoTextarea: new UntypedFormControl(''),
+    demoHiddenPassword: new UntypedFormControl(''),
+    demoDisabledInput: new UntypedFormControl('Disabled Input!'),
+    demoDisabledCheckbox: new UntypedFormControl(true),
+    demoRequiredInput: new UntypedFormControl(null, Validators.required),
+    demoRequiredEmailInput: new UntypedFormControl(null, [
       Validators.required,
       Validators.email,
     ]),
-    demoNumberInput: new FormControl(null, [
+    demoNumberInput: new UntypedFormControl(null, [
       Validators.minLength(1),
       Validators.maxLength(5),
     ]),
@@ -210,7 +214,7 @@ export class AppComponent implements OnInit {
       console.log('Reset clicked');
 
       // Reset form to default saved value
-      this.dynamicForm?.FormGroup.setValue(this.savedValues);
+      this.dynamicForm?.FormGroup.patchValue(this.savedValues);
       this.dynamicForm?.FormGroup.markAsUntouched();
     });
   }
@@ -224,7 +228,7 @@ export class AppComponent implements OnInit {
       disabled: false,
     } as IDynamicOverride;
 
-    this.formGroup.addControl('test', new FormControl(''));
+    this.formGroup.addControl('test', new UntypedFormControl(''));
 
     this.overrides.push(newControl);
 
@@ -234,7 +238,7 @@ export class AppComponent implements OnInit {
 
   public setUsername(): void {
     this.dynamicForm?.cleanForm();
-    this.formGroup.controls.demoInput.setValue('Jabali2004');
+    this.formGroup.controls.demoInput.patchValue('Jabali2004');
     this.dynamicForm?.reloadForm(this.formGroup, this.overrides);
   }
 }

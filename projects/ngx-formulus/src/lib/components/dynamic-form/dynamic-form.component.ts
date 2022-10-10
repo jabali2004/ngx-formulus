@@ -1,6 +1,6 @@
 import type { OnInit } from '@angular/core';
 import { Component, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import type { IDynamicControl } from '../../interfaces/dynamic-control';
 import type { DynamicForm } from '../../classes/dynamic-form';
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
@@ -15,7 +15,7 @@ import type { IActionOptions } from '../../interfaces/action-options';
 export class DynamicFormComponent implements OnInit {
   @Input() data: DynamicForm | null = null;
 
-  public formGroup: FormGroup = new FormGroup({});
+  public formGroup: UntypedFormGroup = new UntypedFormGroup({});
   public controls: IDynamicControl[] = [];
   public actions: IActionOptions = {};
 

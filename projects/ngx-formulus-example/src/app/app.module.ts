@@ -5,26 +5,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { TemplateService } from 'projects/ngx-formulus/src/public-api';
-import {
-  ControlType,
-  NgxFormulusModule,
-} from 'projects/ngx-formulus/src/public-api';
+import { NgxFormulusModule } from 'projects/ngx-formulus/src/public-api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import type { NgxFormulusConfig } from 'projects/ngx-formulus/src/lib/interfaces/ngx-formulus-config';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { ControlsModule } from './controls/controls.module';
-
-import { NebularInputComponent } from './controls/nebular/nebular-input/nebular-input.component';
-import { NebularSaveButtonComponent } from './controls/nebular/nebular-save-button/nebular-save-button.component';
 
 const formulusConfig: NgxFormulusConfig = {
   // templates: {
-  //   input: NebularInputComponent as Component,
+  //   input: InputComponent as Component,
   // },
 };
 
@@ -38,9 +30,6 @@ const formulusConfig: NgxFormulusConfig = {
     NgxFormulusModule.forRoot(formulusConfig),
     NgbModule,
     BrowserAnimationsModule,
-    NbThemeModule.forRoot({ name: 'default' }),
-    NbLayoutModule,
-    NbEvaIconsModule,
     ControlsModule,
   ],
   providers: [],
@@ -49,11 +38,11 @@ const formulusConfig: NgxFormulusConfig = {
 export class AppModule {
   constructor(private templateService: TemplateService) {
     // this.templateService.setTemplate(
-    //   NebularInputComponent as Component,
+    //   InputComponent as Component,
     //   ControlType.Input
     // );
     // this.templateService.setTemplate(
-    //   NebularSaveButtonComponent as Component,
+    //   SaveButtonComponent as Component,
     //   ControlType.SaveButton
     // );
   }
